@@ -1,0 +1,18 @@
+Defacement ou deface:
+  -  como é conhecido popularmente, é um termo de origem inglesa para o ato de modificar ou danificar a superfície ou aparência de algum objeto. Na segurança da informação, é usado para categorizar os ataques realizados por defacers e script kiddies para modificar a página de um site na Internet.
+
+Spoofing:
+  - é um tipo de falsificação tecnológica que procura enganar uma rede ou uma pessoa fazendo-a acreditar que a fonte de uma informação é confiável, quando a realidade é bem diferente.
+  - Por exemplo, hackers podem fazer um spoofing de e-mail, enviando a você mensagens que pareçam vir de alguém em quem você confia como forma de fazê-lo fornecer dados sigilosos. Ou então eles podem realizar o spoofing de IP e DNS para tentar fazer com que sua rede direcione você para sites fraudulentos que vão infectar seu computador
+
+Phishing:
+  - é uma maneira desonesta que cibercriminosos usam para enganar você a revelar informações pessoais, como senhas ou cartão de crédito, CPF e número de contas bancárias. Eles fazem isso enviando e-mails falsos ou direcionando você a websites falsos.
+  - Mensagens de Phishing parecem ser enviados por organizações legítimas como PayPal, UPS, uma agência do governo ou seu banco; entretanto, elas são em fato falsas mensagens. Os e-mails pedem de forma educada por atualizações, validação ou confirmação de informações da sua conta, sempre dizendo que houve algum problema. Você é então redirecionado a um site falso e enganado a apresentar informações sobre a sua conta, que podem resultar em roubos de identidade.
+
+Sniffers:
+  - são ferramentas que interceptam e analisam o trafego de uma rede, com ele você pode descobrir quais sites estão sendo acessados na rede, quais tipos de protocolos estão sendo usados (http, FTP, POP3, SMTP, etc) e até mesmo capturar senhas de sites com autenticação, como redes sociais, painéis administrativos, emails, etc
+  - 1. WireShark
+  - 2. Microsoft Network Monitor
+  - 3. Capsa Packet Sniffer
+  - 4. NetworkMiner
+  - 5. SniffPass

@@ -1,0 +1,122 @@
+Bancos de dados distribuídos:
+- Homogêneo: Todos os nós rodando o mesmo SGBD.
+- Heterogêneo: Diferentes nós rodando diferentes SGBDs (relacionais ou mesmo não relacionais).
+
+==========================================
+Vantagens de SGBDD
+  - Compartilhamento de dados e controle distribuído:  Existe um administrador global, responsável pelo sistema como um todo, mas parte das responsabilidades são delegadas a administradores locais que gozam de certa autonomia.
+  - Maior confiabilidade: O sistema funciona conforme o projeto.
+  - Maior disponibilidade: O sistema está disponível por maior percentual de tempo.
+  - Melhor desempenho no processamento de consultas:  Sub-consultas podem ser executadas em paralelo.
+  - Maior escalabilidade: É mais fácil acrescentar um nó, desde que os mesmos sejam autônomos, do que substituir um sistema centralizado existente por um maior.
+
+==========================================
+Desvantagens de SGBDD
+  - Custo de desenvolvimento do software: A alta complexidade torna mais difícil implementar um SGBDD, tornando-o mais caro.
+  - Grande potencial para bugs: Ocorrência de erros muito sutis na colaboração entre os nós do SGBDD.
+  - Aumento do overhead de processamento: Devido à troca de mensagens e à computação adicional para obter a coordenação entre os nós.
+  - Questões de projeto específicas: Por exemplo, replicação e fragmentação de dados.
+  - Dificuldades para obter conhecimento global: Por exemplo, controle de concorrência entre transações distribuídas e detecção de deadlock
+
+==========================================
+Fragmentação de dados
+Uma relação é dividida em fragmentos, que são armazenados em diferentes nós.
+  - Fragmentação horizontal: os fragmentos são definidos por seleção de tuplas.
+  - Fragmentação vertical: os fragmentos são definidos por projeção de atributos.
+
+==========================================
+Replicação de dados
+  - Réplicas dos dados em diferentes nós
+  - Aumento do paralelismo
+  - Aumento da disponibilidade de dados
+  - Elevação do overhead de atualização
+  - Melhora desempenho das operações de leitura, enquanto acarreta maior overhead nas atualizações
+
+==========================================
+Atualização dos dados replicados
+  - Replicação síncrona: Todas as cópias de uma relação modificada (fragmentos) deve ser atualizadas antes da transação modificante fazer commit.
+    –- A distribuição de dados fica transparente para o usuário
+  -- Replicação Assíncrona: As cópias da relação modificada só são atualizadas periodicamente; réplicas podem ficar inconsistentes por algum tempo
+    –- Os usuários devem estar cientes da distribuição e replicação
+    –- Produtos atuais seguem esta abordagem
+
+==========================================
+Processamento de consultas em SGBDD
+Deve levar em conta:
+  - Réplicas dos dados
+  - Reconstrução de relações a partir de  fragmentos
+  - Tempo de recuperação
+  - Tempo de processamento
+  - Transmissão de dados via rede
+
+==========================================
+Consultas Distribuídas
+
+==========================================
+==========================================
+==========================================
+==========================================
+=======================================================================================
+=======================================================================================
+=======================================================================================
+=======================================================================================
+=======================================================================================
+=======================================================================================
+
+
+Sistema de Gerenciamento de Banco de Dados Distribuídos (SGBDD)
+
+O Sistema de Gerenciamento de Banco de Dados Distribuídos (SGBDD) controla o armazenamento e processamento de dados relacionados logicamente por meio de sistemas computacionais interconectados através de uma rede, em que tanto os dados como as funções de processamento são distribuídos entre os diversos locais.
+
+Existem dois tipos de banco de dados distribuídos, os homogêneos e os heterogêneos. Os homogêneos são compostos pelos mesmos bancos de dados, já os heterogêneos são aqueles que são compostos por mais de um tipo de banco de dados.
+
+Num banco de dados distribuídos os arquivos podem estar replicados ou fragmentados, esses dois tipos podem ser encontrados ao longo de seus nós. Quando os dados se encontram replicados, existe uma cópia de cada um dos dados em cada nó, tornando as bases iguais (ex: tabela de produtos de uma grande loja). Já na fragmentação, os dados se encontram divididos ao longo do sistema, ou seja a cada nó existe uma base de dados diferente se olharmos de uma forma local, mas se analisarmos de uma forma global os dados são vistos de uma forma única, pois cada nó possui um catálogo que contém cada informação dos dados dos bancos adjacentes.
+
+A replicação dos dados pode se dar de maneira síncrona ou assíncrona. No caso de replicação síncrona, cada transação é dada como concluída quando todos os nós confirmam que a transação local foi bem sucedida. Na replicação assíncrona, o nó principal executa a transação enviando confirmação ao solicitante e então encaminha a transação aos demais nós.
+
+=======================================================================================
+Vantagens
+
+Os dados ficam localizados próximos aos locais de maior demanda – Os dados ficam dispersos para atender a necessidade comercial;
+
+Maior rapidez de acesso aos dados – Os usuários finais costumam trabalhar apenas com um sub-conjunto dos dados da empresa, armazenado localmente;
+
+Maior rapidez de processamento de dados – Um SGBDD divide a carga de trabalho do sistema, processando dados em vários locais;
+
+Facilidade de ampliação – É possível adicionar novos locais à rede sem afetar as operações de outros locais;
+
+Aprimoramento das comunicações – Como os sites locais são menores e mais próximos dos clientes, promovem melhor comunicação entre os departamentos e entre os clientes e a equipe da empresa;
+
+Custos operacionais reduzidos – Do ponto de vista dos custos, é mais eficiente adicionar estações de trabalho a uma rede do que atualizar um sistema de mainframe. O trabalho de desenvolvimento é feito de modo mais rápido e barato em PCs de baixo custo do que em mainframes;
+
+Interface amigável – Os PCs e as estações de trabalho costumam ser equipados com interface gráfica de usuário (GUI) fácil de usar. A GUI simplifica o treinamento e a utilização dos usuários finais;
+
+Menor risco de falha em ponto único – Quando um componente dos computadores falha, o trabalho é mantido por outras estações. Os dados também são distribuídos em vários locais;
+
+Independência de processador – O usuário final é capaz de acessar todas as copias disponíveis dos dados e suas solicitações são processadas por qualquer processador no local dos dados.
+
+=======================================================================================
+Desvantagens
+
+Complexidade de gerenciamento e controle – As aplicações devem reconhecer a localização dos dados e ter a capacidade de integrá-los a partir de vários locais. É necessário que os administradores tenham a capacidade de coordenar as atividades do BD, evitando sua degradação em função de anomalias;
+
+Dificuldade tecnológica – É necessário tratar e solucionar a integridade de dados, o gerenciamento de transações, o controle de concorrência, o backup, a recuperação, a otimização de consultas, a seleção do caminho de acesso, etc;
+
+Segurança – A probabilidade de falhas de segurança aumenta quando os dados são armazenados em vários locais. A responsabilidade do gerenciamento dos dados será compartilhada por diferentes pessoas em diversos locais;
+
+Falta de padrões – Não há protocolos de comunicação padronizado no nível de BD. (Embora o TCP/IP seja, na prática, um padrão no nível de rede, não há padronização no nível de aplicação). Por exemplo, diferentes fornecedores de BD empregam técnicas diferentes e geralmente incompatíveis de gerenciamento da distribuição de dados e processamento no ambiente de SGBDD;
+
+Ampliação das necessidades de armazenamento e infraestrutura – São necessárias várias cópias de dados em diferentes locais, exigindo, assim, espaço adicional de armazenamento em disco;
+
+Aumento de custos com treinamento – Os custos com treinamento costumam ser mais elevados em modelos distribuídos do que em centralizados, às vezes a ponto de compensar as economias operacionais de hardware;
+
+Custos – Os BDD exigem uma infraestrutura duplicada para operar (localização física, ambiente, pessoal, software, licenciamento, etc).
+
+=======================================================================================
+Cuidados com banco de dados distribuídos devem ser tomados para assegurar o seguinte:
+
+A distribuição é transparente — Usuários devem poder interagir com o sistema como se ele fosse um único sistema lógico. Isso se aplica ao desempenho do sistema, métodos de acesso, entre outras coisas.
+
+Transações são transparentes — Cada transação deve manter a integridade do banco de dados dentre os múltiplos bancos de dados.
+
+Transações devem também ser divididas em subtransações, cada subtransação afetando um sistema de banco de dados.

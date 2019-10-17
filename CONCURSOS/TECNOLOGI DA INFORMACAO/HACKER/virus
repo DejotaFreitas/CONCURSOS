@@ -1,0 +1,7 @@
+TROJAN:
+  - é um tipo programa malicioso que podem entrar em um computador disfarçados como um programa comum e legítimo. Ele serve para possibilitar a abertura de uma porta de forma que usuários mal intencionados possam invadir seu PC
+
+WORM:
+  - Diferente dos vírus comuns, os worms podem se autorreplicar sem a necessidade de infectar arquivos legítimos, criando cópias funcionais de si mesmos. Essas características permitem que os worms se espalhem por redes de computadores e drivers USB. Alguns worms também se alastram por mensagens de e-mail, criando anexos maliciosos e os enviando para as listas de contato da conta invadida
+  -Um worm pode ser projetado para tomar ações maliciosas após infestar um sistema. Além de se autorreplicar, pode deletar arquivos em um sistema ou enviar documentos por email.
+  - A partir disso, o worm pode tornar o computador infectado vulnerável a outros ataques e provocar danos apenas com o tráfego de rede gerado pela sua reprodução – o Mydoom, por exemplo, causou uma lentidão gerada na rede de computadores mundial nos niveis mais alto de seu ataque .

@@ -1,0 +1,163 @@
+As coleções de dados que compõe um banco de dados computadorizado precisam ser de alguma forma armazenadas em alguma mídia de armazenamento, para que assim os softwares SGBDs possam recuperar, atualizar e processar esses dados conforme necessário.
+
+=============================================================
+ORDEM DE ESCRITA (ordem de LEITURA é inversa):
+  1 - CPU(cache)
+  2 - Memoria Principal (RAM, SRAM)
+  3 - Armazenamento On-Line(Disco Magnético e Óptico)
+  4 - Armazenamento Near-Line (Disco Óptico e Fitas)
+
+=============================================================
+Memoria de Acesso Aleatória (RAM)
+  -  muito mais rápida que dispositivos de armazenamento em massa
+  - Volátil
+  - Módulos de memória são dividido em linhas e colunas
+
+=============================================================
+Memória cache
+  - Tipo ultra rápido de memória que serve para armazenar os dados mais frequentemente usados pelo processador
+  - Extremamente caro (chega a ser algumas centenas de vezes mais cara que a memória RAM convencional)
+  - Memórias RAM não eram mais capazes de acompanhar a velocidade dos processadores
+
+=============================================================
+Armazenamento em disco:
+  - São utilizados para armazenamento de grande quantidade de dados
+  - Não voláteis.
+  - Divisão física e divisão lógica
+  - Na unidade de disco estão presentes: cabeçote de leitura/escrita, braço mecânico, atuador e controladora de disco
+
+=============================================================
+Armazenamento em disco
+  - Desempenho baseado na medida de três
+tempos:
+  - Tempo de pesquisa
+  - Tempo de atraso rotacional (latência)
+  - Tempo de transferência de bloco
+  - Tempo de pesquisa e atraso rotacional são geralmente muitos maiores que o tempo de transferência do bloco
+
+=============================================================
+Armazenamento em fitas magnéticas
+ - Dispositivos de armazenamento de acesso sequencial
+ - Os dados são armazenados em cartuchos de fitas magnéticas
+ - Parecidas com as fitas de áudio e vídeo comuns
+ - Cada byte disposto de forma transversal na fita
+ - Acesso lento
+ - Utilizadas principalmente para backup
+
+=============================================================
+BUFFERING DE BLOCOS
+  - Diversos buffers podem ser reservados na memória principal para acelerar a transferência de dados
+  - Enquanto um buffer estiver sendo lido ou escrito a CPU pode processar os dados em outro.
+  - Útil para processos executados concorrentemente
+  - Buffering duplo: permite que leituras e escritas sejam realizadas de forma continua em blocos consecutivos no disco, eliminando assim o tempo de pesquisa e atraso rotacional
+
+=============================================================
+Um arquivo é uma sequencia de registros
+  - Registro é uma coleção de valores de dados (itens de dados)
+  - Dois tipos de registros: tamanho fixo e tamanho variável
+  - Arquivos com mesmo tipo de registro e de tamanhos fixo facilitam a procura para SGBDs
+  - Registros são gravados em blocos
+
+Registros de arquivo podem ser spanned e  não-spanned (unspanned)
+  - Spanned:
+      - Um registro pode ser armazenado em mais de um bloco
+      - São indicados para arquivos de registros de tamanhos variável
+
+  - Não-spanned:
+      - Registro não pode passar o limite do bloco
+      - São indicados para arquivos de registros de tamanhos fixo
+
+Os blocos de disco que são alocados para armazenar os registros de um arquivo podem ser continuos, encadeados ou indexados
+
+Um descritor de arquivo (cabeçalho de arquivo) tem informções que descrevem o arquivo, tais como: nomes dos campos e seu tipos de dados, endereços dos blocos no
+
+=============================================================
+As operações em um arquivo podem ser:
+  - operações de recuperação
+  - operações de atualização
+
+Operações mais comuns
+  - Reset (Reinicializar): Reposiciona o ponteiro de arquivo, de um arquivo aberto, no seu inicio.
+  - Find ou Locate (Encontrar ou Localizar): Busca o primeiro registro que satisfaça a condição de
+pesquisa, transfere o bloco que tem a condição de pesquisa para um buffer de memória principal e faz
+o ponteiro de arquivo apontar para o registro no buffer, tornando-o o registro atual.
+  - Read ou Get (Ler ou Obter): Copia o registro atual do buffer para uma variável do programa.
+  - FindNext (Encontrar o próximo): procura o próximo registro no arquivo que satisfaça a condição de
+pesquisa, transferindo o bloco que contém aquele registro para o buffer da memória principal.
+  - Delete (Excluir): Exclui o registro atual e no final atualiza o arquivo de disco para refletir a exclusão.
+  - Modify (Modificar): Modifica alguns valores de campos do registro atual e no final atualiza o arquivo  no disco para refletir a modificação
+  - Insert (Incluir): Acrescente um novo registro no arquivo por meio da localização do bloco no qual o registro deve ser incluído, transferindo aquele bloco para o buffer da memória principal, escrevendo o registro no buffer e no final escrevendo o buffer no disco para refletir a modificação.
+  - Close (Fechar): Finaliza o acesso ao arquivo por meio da liberação dos buffers e da execução de quaisquer outras operações de limpeza necessárias.
+
+=============================================================
+ARQUIVOS DE REGISTROS DESORDENADOS (HEAP FILES)
+  - Também chamados de arquivos de pilha
+  - Novos registros são inseridos no final do arquivo
+  - Para procurar um registro é necessário uma procura linear através dos registros
+  - Inserção de registros é bem eficiente
+  - Ler os registros em ordem de acordo com um campo em particular exige a ordenação prévia dos registros do arquivo
+=============================================================
+ARQUIVOS ORDENADOS (SORTED FILES)
+  - Também chamados de arquivo sequencial
+  - Registros de arquivos são mantidos ordenados por de acordo com um valor um certo campo
+  - Inserção é custosa
+  - É comum manter um arquivo de overflow para agilizar as inserções
+  - É possível fazer uma procura binária através do valor do campo de ordenação
+
+=============================================================
+HASHING
+  - A idéia do hashing é fornecer uma função h(x), chamada de função hash que, aplicada ao valor do campo de hash de um registro, gere o endereço do bloco de disco no qual o registro está armazenado
+  - Hashing interno é normalmente implementada através de uma tabela hash por meio de um vetor de registros
+  - Funções hash não garantem endereços únicos
+  - Ocorrência de colisões
+
+HASHING INTERNO
+  - Métodos para tratar colisões:
+      - Open Addressing (Endereço aberto)
+      - Encadeamento (Chaining)
+      - Hashing Múltiplo
+
+HASHING EXTERNO
+  - Chama-se hash externo quando se trata de hashing para arquivos em disco
+      - O espaço de endereçamento alvo é constituído de buckets,
+      - Buckets são grupos de blocos de disco consecutivos.
+      - A função hash mapeia uma chave a um número de bucket
+      - Uma tabela, mantida no cabeçalho do arquivo, converte o número do bucket para o endereço de   bloco de disco
+
+Os dois esquemas de hashing descritos anteriormente são chamados de hashing estático, porque o número de buckets alocados é fixo. Isto representa um grande problema para arquivos dinâmicos.
+
+Hashing para lidar com arquivos dinâmicos tiram a vantagem de que a aplicação de uma função hashing gera um número inteiro não negativo, podendo ser representado como número binário
+
+HASHING EXTENSÍVEL
+  - Mantém um vetor de 2d endereços de buckets, onde d é chamado de profundidade global, que funciona como um tipo de diretório
+  - Uma profundidade local d', armazenada em cada bucket, especifica o número de bits no qual os conteúdos dos buckets são baseados
+  - O valor d pode ser aumentado ou diminuído uma unidade por vez, dobrando ou dividindo ao meio a capacidade
+  - Uma inserção em um bloco que esteja cheio causa a divisão do bloco em dois novos blocos. Os registros são redistribuidos ao longo destes dois blocos.
+  - Precisa de dois acessos a blocos para localizar o registro desejado
+
+HASHING LINEAR
+  - Permite que um arquivo hash expanda ou diminua seu número de buckets dinamicamente, sem necessitar de um diretório
+  - Quando uma colisão levar a um registro de overflow em qualquer bucket do arquivo, o primeiro bucket será dividido em dois buckets
+  
+=============================================================
+
+
+=============================================================
+
+
+=============================================================
+
+
+=============================================================
+
+
+=============================================================
+
+
+=============================================================
+
+
+=============================================================
+
+
+=============================================================

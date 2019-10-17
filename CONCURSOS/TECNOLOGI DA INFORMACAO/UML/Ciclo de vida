@@ -1,0 +1,67 @@
+O Ciclo de Vida do Desenvolvimento de Sistemas ( SDLC – Systems Development Life Cycle), conhecido também com o ciclo de vida do software refere-se aos estágios de concepção, projeto, criação e implementação.
+
+
+  - O (levantamento das necessidades) também chamado de análise de requisitos , identifica as necessidades deinformações da organização.
+
+  - A (análise de alternativas) consiste na identificação e avaliação de sistemas alternativos.
+
+  - Projeto trata da construção das especificações detalhadas para o projeto selecionado. Essas especificações incluem o projeto das interfaces, banco de dados, características físicas do sistema, tais como número, tipos e localizações das estações de trabalho, hardware de processamento, o cabeamento e os dispositivos de rede. Deve especificar os procedimentos para testar o sistema completo antes da instalação
+
+  - (Desenvolvimento) inclui o desenvolvimento ou aquisição do software, a provável aquisição do hardware e o teste do
+  novo sistema.
+
+  - (Implementação) ocorre após o sistema ter passado satisfatoriamente por testes de aceitação. O sistema é transferido do ambiente de desenvolvimento para o ambiente de produção. O sistema antigo (se existir) deve migrar para o novo.
+
+  - (Manutenção) refere-se a todas as atividades relacionadas a um sistema depois que ele é implementado. Deve incluir atividades tais como a correção de software que não funcione corretamente, a adição de novos recursos aos sistemas em resposta às novas demandas dos usuários.
+
+
+===================================================================
+Modelos de ciclo de vida, quais sejam:
+  - Cascata
+  - Modelo em V
+  - Incremental
+  - Evolutivo
+  - RAD
+  - Prototipagem
+  - Espiral
+  - Modelo de Ciclo de Vida Associado ao RUP
+
+===================================================================
+Modelo em Cascata:
+  - O nome "cascata" foi atribuído em razão da sequência das fases, onde cada fase só começa quando a anterior termina
+
+Formalizado  por Royce em 1970, é o modelo mais antigo. Suas atividades fundamentais são:
+  - análise e definição de requisitos;
+  - projeto;
+  - implementação;
+  - teste;
+  - integração.
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================
+
+
+===================================================================

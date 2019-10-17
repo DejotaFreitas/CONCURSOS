@@ -1,0 +1,25 @@
+14.1. Arquitetura Baseada em http
+
+Neste tipo de arquitetura, para a comunicação entre o cliente e o servidor Web (a partir de um browser), é utilizado o já tão conhecido por todos internautas, protocolo http, e a nível de comunicação entre o servidor Web e seus dados, é utilizado o protocolo CGI e seus derivados. Este protocolo, apesar de ser ainda o mais difundido e utilizado, apresenta algumas deficiências como:
+
+a. O CGI requer a criação de um processo para cada requisição que é feita;
+b. Os servidores ficam responsáveis em gerar uma apresentação em HTML para o cliente, ocasionando assim um tráfego adicional na rede por necessitar fazer uma leitura a mais no servidor.
+c. O protocolo http não interage muito bem com o TCP (Protocolo de Transporte utilizado na Internet);
+d. O http não possui nenhum método para a criação de seções de estado entre requisições múltiplas;
+e. Interage com o usuário semelhantemente a um processo em Bach, ou seja, permite apenas uma requisição/resposta de cada vez.
+
+
+14.2. Arquitetura Baseada em Protocolos "Pessoais"
+
+Como o próprio nome já diz, nesse tipo de arquitetura, o protocolo utilizado é de caráter pessoal, a critério do programador, ou seja, não está vinculado a nenhum conhecido no mercado (http), entretanto nesse tipo de arquitetura, o programador precisará ter muito mais conhecimento em programação de baixo nível de rede, já que ele será responsável por programar as funções que o protocolo precisará realizar, tornando assim muito mais difícil a sua concretização.
+
+14.3. Arquitetura Baseada em Objetos Distribuídos
+
+Com o avanço da tecnologia, e com o advento de novos conceitos na programação, surgiu um novo marco na arquitetura de comunicação entre cliente e o servidor web, justamente uma nova arquitetura que se baseia no recente conceito dos objetos distribuídos. As vantagens que essa nova arquitetura trouxe, deixaram obsoletas as arquiteturas baseadas em protocolos pessoais e fizeram com que as tradicionais http fossem rebaixadas para níveis de sistemas menos complexos e interativos. Sem dúvida alguma, hoje em dia a melhor opção para se desenvolver aplicações de interação de cliente/servidor na web é a utilização deste protocolo de objetos distribuídos, tais vantagens para sua utilização podem ser relacionadas em:
+
+a. Os programadores não precisam mais se preocupar com os detalhes de programação de baixo nível de rede, tudo porque o nível de aplicação desse protocolo é apresentado como métodos de objetos definidos pela IDL, que apresenta-se mapeado para todos os propósitos;
+b. Como o próprio nome já nos mostra, essa arquitetura absorve todos os conceitos de orientação a objetos existentes;
+c. Com a utilização de applets, é possível acessar diretamente o conteúdo desejado, não necessitando assim de um browser intermediário na comunicação;
+d. A utilização de múltiplos threads permite a elaboração de ricas apresentações e possibilita aos servidores web atenderem vários clientes ao mesmo tempo;
+e. Outra vantagem é a "notificação assíncrona", o cliente pode criar um objeto e pedir que o mesmo referencie o servidor, sem precisar verificar no mesmo se algum evento ocorreu. Ficando cabível ao servidor apenas em chamar o cliente quando o evento ocorrer;
+f. A arquitetura CORBA utiliza o JAVA para acessar os cliente web. 

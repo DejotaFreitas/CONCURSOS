@@ -1,0 +1,60 @@
+Entidade: é tudo aquilo sobre o qual se deseja manter informações.
+  - Pessoa(Nome, idade, profissão)
+
+Instância: objeto de uma entidade com suas respectivas propriedades que é distinguível dos outros objetos.
+  - Pessoa(Dejota, 29, TI), Pessoa(Taynan, 22, Técnico Edificações)
+
+Atributos: São as propriedades que caracterizam ou descrevem uma entidade ou um relacionamento
+  - Pessoa(Nome, idade, profissão)
+
+Domínio do Atributo: conjunto de valores permitidos para aquele atributo
+  - Pessoa(Nome varchar(40), idade integer, profissão varchar(100))
+
+
+Atributos Simples: é atômico.
+  - Ex.	Idade: numérico	Nome: cadeia de caracteres
+Atributos Composto: contém sub-atributos que compõem o atributo.
+  - Ex.: Endereço(rua, número, bairro, CEP, cidade)
+
+Atributos Simplesmente valorados: têm um único valor para uma instância de uma entidade.
+  - Ex.: PESSOA: Idade
+
+Atributos Multivalorados: possuem vários valores numa instância de uma entidade.
+  - PESSOA:TitulaçãoSuperior(nenhum, Bel. MSc., PhD)
+
+Atributos derivados: podem ser determinados a partir de outros atributos/entidades.
+  - Ex. Idade e dataAniversário
+
+
+Restrições de Integridade: Caracterizam as restrições nas quais os relacionamentos entre entidades estão submetidos (regras do negócio).
+  - Ex.: Todo empregado deve estar lotado num departamento
+
+Restrições Cardinalidade: quantidade de instâncias que podem participar do relacionamento
+    - Um_para_Um (1:1): uma instância de uma entidade A está associada a no máximo a uma instância de uma entidade B, e vice-versa.
+    - Um_para_Muitos (1:N): uma instância de uma entidade A está associada a qualquer número de instâncias da entidade B. Porém, uma instância da entidade B pode estar associada, no máximo, a uma instância da entidade A.
+    - Muitos_para_Um (N:1): uma instância da entidade A está associada a uma instância de B. Porém, uma instância de B pode estar associada a qualquer número de instâncias de A.
+    - Muitos_para_Muitos(M:N): uma instância da entidade A está associada a qualquer número de instâncias da entidade B, e vice-versa.
+
+Restrições Totalidade: obrigatoriedade da ocorrência do relacionamento entre as entidades envolvidas.
+  - o uso de “zero” (0:1) ou (0:N) indica a totalidade do relaciomento.
+
+Entidades Fracas: são dependentes de existência ou de identificação de um outra entidade.
+  - Ex.: Relacionamento entre Empregados e Dependentes
+
+Chaves: distingue cada instancia de entidade
+  - id (PRIMARY KEY)
+
+Superchave: é o conjunto de atributos que identificam uma instância. Se K é uma superchave então  todo superconjunto de K também será uma superchave.
+  - Seja:  Empregado(matricula, nome, endereco, funcao, salario)
+  - Então: (matricula) é uma superchave;
+  - Então: (matricula, nome) é um superchave;
+  - Então: (matricula, nome, funcao) é uma superchave.
+
+As superchaves mínimas (que não têm nenhum subconjuunto) são chamadas de chaves candidatas.
+  - Ex.: Empregado: matricula, (nome, endereco), cpf, identidade
+
+A chave candidata escolhida pelo projetista para identificar as instâncias é chamada de chave primária.
+  - Ex. Empregado: matricula
+
+Chave de identificação composta: é uma chave formada por mais de um atributo.
+  - Ex.: Multa(carro_id, habilitacao_id, valor_multa).

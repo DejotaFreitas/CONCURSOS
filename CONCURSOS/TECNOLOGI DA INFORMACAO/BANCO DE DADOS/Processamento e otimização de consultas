@@ -1,0 +1,143 @@
+Análises (léxica, sintática, semântica)
+  – verificam a sintaxe da consulta
+  – verificam se os nomes das relações da consulta são os mesmos nomes presentes no BD
+  – substituem referências ao nome de uma visão por expressões da álgebra, a fim de computar essa visão
+
+Forma intermediária de consulta
+  – utiliza estrutura de dados de árvore ou grafo (árvore de consulta ou grafo de consulta)
+
+Módulo de otimização de consulta
+  – produz um plano de estratégia de execução
+    -- indica qual o plano de execução
+    -- gera o código da consulta para executar tal plano
+
+
+Processador do BD de tempo de execução
+    – executa o código da consulta (compilado ou interpretado)
+    – produz o resultado da consulta
+
+==================================================================================
+Fase 0
+  – nível de SQL
+  – consiste em transformar a consulta expressa em SQL em uma árvore de consulta expressa em álgebra relacional
+
+Fase 1
+  – nível de álgebra relacional
+  – consiste em aplicar heurísticas para converter uma árvore de consulta em uma árvore de consulta equivalente
+  – consiste em encontrar uma expressão que seja equivalente à expressão dada, mas que seja mais eficiente na sua execução
+
+Fase 2
+  – consiste na seleção de uma estratégia detalhada para o processamento da consulta
+    -- como a consulta será executada
+    -- quais índices serão escolhidos
+    -- qual a ordem de processamento das tuplas
+
+
+==================================================================================
+Árvore de Consulta (Fase 0)
+
+Estrutura de árvore que corresponde a uma expressão da álgebra relacional
+
+Representação
+  – nós folhas
+    -- relações de entrada para a consulta
+  – nós internos
+    -- operações da álgebra relacional
+
+Indica uma ordem específica das operações durante a execução de uma consulta
+
+Execução
+  – efetuar uma operação do nó interno sempre que os seus operandos estiverem disponíveis
+  – substituir o nó interno pela relação que resulta da execução da operação
+  – final da execução:
+    -- o nó raiz é executado
+    -- a relação resultado para a consulta é produzida
+
+
+==================================================================================
+Conversão da Árvore de Consulta (Fase 1)
+
+Observações
+  – o produto cartesiano das relações empregado, trabalha e projeto produz uma grande relação, a qual provavelmente precisará ser armazenada em disco
+  – acesso a disco
+    -- para ler as relações empregado, trabalha e
+  projeto
+    -- para ler e escrever resultados intermediários
+  – objetivo
+    -- reduzir o tamanho dos resultados intermediários
+
+Observação
+Diversos atributos de um esquema podem ser geralmente eliminados
+Atributos que não podem ser eliminados
+  – aqueles que aparecem no resultado de uma consulta
+  – aqueles que são necessários para processar operações subsequentes
+
+Heurísticas Básicas
+Aplicar primeiro as operações que reduzem o tamanho dos resultados intermediários
+  – operações de seleção
+    -- reduzem o número de tuplas
+  – operações de projeção
+    -- reduzem o número de atributos
+
+Aplicar primeiro as operações de seleção e de junção mais restritivas
+  – reordenar os nós folha da árvore de consulta
+  – evitar a operação de produto cartesiano
+  – ajustar o restante da árvore de forma apropriada
+
+
+==================================================================================
+Custo de Consultas (Fase 2)
+Estratégia a ser escolhida depende
+  – do tamanho de cada relação
+  – da distribuição de valores dentro de colunas
+  – custo
+
+Objetivo
+  – estimar o tamanho do resultado (número de tuplas a serem retornadas) e o custo da consulta
+
+Otimização de Consultas baseada no Custo
+Características
+  – utiliza técnicas de otimização tradicionais que percorrem o espaço solução para um problema
+  – identifica uma solução que minimiza uma determinada função custo
+  – depende de estatísticas armazenadas pelo SGBD sobre as relações e sobre os índices
+
+Componentes da Função Custo
+Custo de acesso à memória secundária
+  – custo para buscar, ler e escrever blocos de dados que residem em disco
+Custo de armazenamento
+  – custo para armazenar quaisquer arquivos intermediários gerados pela estratégia de execução da consulta
+Custo de computação
+  – custo para a realização de operações em memória principal (i.e., buffers)
+
+Componentes da Função Custo
+Custo do uso da memória
+  – custo relacionado ao número de buffers de memória principal necessários durante a execução da consulta
+Custo de comunicação
+  – custo de transmitir uma consulta e os seus  resultados do site do banco de dados até o  site ou terminar na qual a consulta foi originada
+
+
+
+Característica  -> Ênfase
+  - BD volumosos -> minimizar o custo de acesso à memória secundária
+  - BD pequenos  -> minimizar o custo de computação
+  - BD distribuídos -> minimizar também o custo de comunicação
+
+Problema NP-Completo
+  – a grande maioria das funções custo enfoca apenas um único fator: custo de acessos à memória secundária (i.e., disco) 
+
+==================================================================================
+
+
+==================================================================================
+
+
+==================================================================================
+
+
+==================================================================================
+
+
+==================================================================================
+
+
+==================================================================================

@@ -1,0 +1,15 @@
+Camadas modelo TCP:
+    7 - Aplicação
+      -- HTTP, HTTPS, DNS, DHCP, SNMP, TELNET
+    6 - Apresentação
+      -- EBCDIC, NDR
+    5 - Sessão
+      -- RCP, SSH, SCP, NetBios
+    4 - Transporte
+      -- TCP, UDP
+    3 - Rede
+      -- IP, IPX, ICMP, ARP, RARP, SNMP
+    2 - Enlace de Dados
+      -- Ethernet, FDDI, Frame Relay
+    1 - Física
+      -- Modem, camada física ethernet

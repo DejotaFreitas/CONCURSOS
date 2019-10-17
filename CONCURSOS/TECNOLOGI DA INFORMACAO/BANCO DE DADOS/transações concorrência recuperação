@@ -1,0 +1,220 @@
+Transação é uma unidade lógica de processamento de operações sobre um banco de dados.
+  - Uma transação é formada por uma sequência de operações que precisam ser executadas integralmente para garantir a consistência e a precisão.
+
+=====================================================================================
+Geralmente, uma transação consiste de uma das seguintes instruções:
+  - uma ou mais instruções DML (Data Manipulation Language);
+  - uma instrução DDL (Data Definition Language);
+  - uma instrução DCL (Data Control Language).
+
+=====================================================================================
+Uma transação começa quando for executada a 1ª instrução SQL executável e termina com um dos seguintes eventos:
+  - comando COMMIT ou ROLLBACK é emitido;
+      - instrução DDL ou DCL é executada (commit automático);
+      - o usuário desconecta do banco de dados (commit automático);
+      - o sistema falha (rollback automático)
+
+=====================================================================================
+Quando uma transação termina, o próximo comando SQL inicia automaticamente a próxima transação.
+  - COMMIT: finaliza a transação atual tornando permanentes todas as alterações de dados pendentes.
+  - SAVEPOINT <nome_savepoint>: marca um ponto de gravação dentro da transação atual, sendo utilizado para dividir uma transação em partes menores.
+  - ROLLBACK [TO SAVEPOINT <nome_savepoint>]:
+  - ROLLBACK finaliza a transação atual, descartando todas as alterações de dados pendentes.
+  - ROLLBACK TO SAVEPOINT descarta o ponto de gravação determinado e as alterações seguintes ao mesmo.
+
+
+=====================================================================================
+Exemplo:
+  INSERT INTO Departamento (ID_Depto, NomeDepto,ID_Gerente) VALUES (11, 'RH', 2);
+  SAVEPOINT ponto1;
+  DELETE FROM Funcionario;
+  ROLLBACK TO SAVEPOINT ponto1;
+  UPDATE Funcionario SET salario = salario * 1.05  WHERE ID_Depto = 5;
+  COMMIT;
+
+  No exemplo, o departamento 11 é inserido, os salários dos funcionários do departamento 5 são atualizados, mas nenhum funcionário é excluído.
+
+=====================================================================================
+Quando várias transações são emitidas ao mesmo tempo (transações concorrentes), ocorre um entrelaçamento de operações das mesmas.
+  - Algumas operações de uma transação são executadas; em seguida, seu processo é suspenso e algumas operações de outra transação são executadas.
+  -  Depois, um processo suspenso é retomado a partir do ponto de interrupção, executado e interrompido novamente para a execução de uma outra transação.
+
+=====================================================================================
+As propriedades de uma transação (propriedades ACID)
+devem ser garantidas ao processar transações concorrentes:
+  - Atomicidade: uma transação é uma unidade atômica de processamento; é realizada integralmente ou não é realizada.
+  - Consistência: uma transação é consistente se levar o banco de dados de um estado consistente para outro estado também consistente.
+  - Isolamento: a execução de uma transação não deve sofrer interferência de quaisquer outras transações que estejam sendo executadas concorrentemente.
+  - Durabilidade (ou persistência): as alterações aplicadas ao banco de dados, por meio de uma transação confirmada, devem persistir no banco de dados, não sendo perdidas por nenhuma falha.
+
+=====================================================================================
+Controle de Concorrência:
+
+Técnicas de controle de concorrência são utilizadas para garantir que transações concorrentes sejam executadas adequadamente.
+
+• Muitos problemas podem ocorrer quando transações concorrentes são executadas sem controle, a saber:
+  - problema da perda de atualização;
+  - problema da atualização temporária (leitura suja);
+  - problema da agregação incorreta;
+  - problema da leitura não-repetitiva.
+  - Problema da perda de atualização
+
+Ocorre quando duas transações que acessam os mesmos itens do banco de dados possuem operações entrelaçadas, de modo que torne incorreto o valor de algum item do banco de dados
+
+Problema da atualização temporária (leitura suja):
+  - Ocorre quando duas transações que acessam os mesmos itens do banco de dados possuem operações entrelaçadas, de modo que torne incorreto o valor de algum item do banco de dados
+
+Problema da agregação incorreta:
+  - Se uma transação estiver calculando uma função de agregação em um número de itens, enquanto outras
+  transações estiverem atualizando alguns desses itens, a função agregada pode considerar alguns itens antes que eles sejam atualizados e outros depois que tenham sido atualizados
+
+Problema da agregação incorreta:
+  - Se uma transação estiver calculando uma função de agregação em um número de itens, enquanto outras
+  transações estiverem atualizando alguns desses itens, a função agregada pode considerar alguns itens antes que eles sejam atualizados e outros depois que tenham sido atualizados
+
+
+=====================================================================================
+Recuperação de Falhas:
+
+O SGBD não deve permitir que algumas operações de uma transação T sejam aplicadas ao banco de dados enquanto outras operações de T não sejam.
+  - Isso pode acontecer quando uma transação falha após executar algumas de suas operações (e não todas).
+
+Os tipos de falhas possíveis são:
+  - falha no computador;
+  - erro de transação ou de sistema;
+  - imposição do controle de concorrência;
+  - falha no disco;
+  - problemas físicos e catástrofes.
+
+Para os 3 primeiros tipos de falhas, o sistema deve manter informações suficientes para se recuperar da falha
+
+
+Para manter a consistência do banco de dados, o gerenciador de recuperação registra no histórico (log), para cada transação, as operações que afetam os valores dos itens do banco:
+
+  - [start_transaction, T]: indica que a transação T iniciou sua execução.
+  - [write_item, T, X, old_value, new_value]: indica que a transação T alterou o valor do item X do banco de dados de old_value (valor antigo) para new_value (novo valor).
+  - [read_item, T, X]: indica que a transação T leu o valor do item X do banco de dados.
+  - [commit, T]: indica que a transação T foi finalizada com  sucesso.
+  - [abort, T]: indica que a transação T foi abortada.
+
+
+Quando ocorre uma falha:
+  - as transações inicializadas, mas que não gravaram seus registros de commit no log, devem ser desfeitas;
+  - as transações que gravaram seus registros de commit no log podem ter que ser refeitas a partir dos registros do log.
+
+Quando ocorre uma falha:
+  - as transações inicializadas, mas que não gravaram seus registros de commit no log, devem ser desfeitas;
+  - as transações que gravaram seus registros de commit no log podem ter que ser refeitas a partir dos registros do log.
+
+
+=====================================================================================
+Escalonamento e Recuperabilidade
+
+Um escalonamento S de n transações é uma ordenação dasoperações dessas transações sujeita à restrição de que, para cada transação Ti que participa de S, as operações de Ti em S devem aparecer na mesma ordem em que ocorrem em Ti.
+
+Notação simplificada para escalonamento:
+  - ri(X): read_item(X) na transação Ti.
+  - wi(X): write_item(X) na transação Ti.
+  - ci: commit na transação Ti.
+  - ai: abort na transação Ti.
+
+Duas operações em um escalonamento são ditas conflitantes se:
+  - pertencem a diferentes transações;
+  - possuem acesso ao mesmo item X;
+  - pelo menos uma delas é uma operação write_item(X).
+
+Um escalonamento S é dito ser recuperável se nenhuma transação T em S entrar no estado confirmado até que todas as transações T', que tenham escrito um item que T tenha lido, entrem no estado confirmado
+
+Em um escalonamento recuperável, pode ocorrer um fenômeno conhecido como rollback em cascata, no qual
+uma transação não-confirmada tenha que ser desfeita porque leu um item de uma transação que falhou.
+
+Um escalonamento evita rollbacks em cascata se todas as transações no escalonamento lerem somente itens que tenham sido escritos por transações já confirmadas.
+  - No escalonamento S e anterior, r2(X) deve ser adiada até que T1 tenha sido confirmada (ou abortada), retardando T2.
+
+=====================================================================================
+Seriabilidade de Escalonamentos:
+
+m escalonamento S é denominado serial se, para todas as transações T participantes do escalonamento, todas as operações de T forem executadas consecutivamente no escalonamento; caso contrário, o escalonamento é denominado não-serial.
+
+Um escalonamento serial:
+  - possui somente uma transação ativa de cada vez;
+  - não permite nenhum entrelaçamento de transações;
+  - é considerado correto, independente da ordem de execução das transações;
+  - limita a concorrência;
+  - na prática, é inaceitável
+
+Um escalonamento S de n transações é serializável se for equivalente a algum escalonamento serial das n transações.
+  - Dizer que um escalonamento não-serial S é serializável equivale a dizer que ele é correto, já que equivale a um escalonamento serial que é considerado correto.
+  - Dois escalonamentos são ditos equivalentes se a ordem de quaisquer duas operações conflitantes for a mesma nos dois escalonamentos
+
+
+=====================================================================================
+Técnicas de Bloqueio (Locking)
+
+Bloqueios são usados como um meio de sincronizar o acesso aos itens do banco de dados por transações
+concorrentes.
+  - Um bloqueio consiste em uma variável associada a um item de dado, que descreve o status do item em relação a possíveis operações que podem ser aplicadas ao mesmo.
+  - Em geral, existe um bloqueio para cada item de dado no banco de dados
+
+Duas técnicas de bloqueio são:
+  - bloqueio binário;
+  - bloqueio múltiplo
+
+==========================================
+Bloqueio Binário:
+Um bloqueio binário possui dois estados:
+  - bloqueado (locked);
+  - desbloqueado (unlocked).
+
+As operações necessárias são:
+  - lock_item(X): bloqueia o item X;
+  - unlock_item(X): desbloqueia o item X.
+
+O bloqueio binário impõe a exclusão mútua no item de dado.
+  - Se o item X for bloqueado por uma transação Ti, nenhuma
+  outra transação Tj poderá acessar o item X até que a transação Ti o desbloqueie, ficando esperando por tal desbloqueio.
+  - O processo de espera coloca a transação Tj em uma fila de
+  espera pelo item X até que o mesmo seja desbloqueado por Ti.
+
+Para que a técnica de bloqueio binário possa ser usada, uma transação T deve obedecer às seguintes regras:
+    - T deve emitir um lock_item(X) antes que qualquer read_item(X) ou write_item(X) seja executado;
+    - T deve emitir um unlock_item(X) depois que todos os read_item(X) e write_item(X) tenham sido completados em T;
+    - T não poderá emitir lock_item(X) se X estiver bloqueado por T;
+    - T poderá emitir um unlock_item(X) apenas se tiver bloqueado  X.
+
+O bloqueio binário é o mecanismo mais simples e mais restrito de controle de concorrência.
+     A implementação requer uma tabela de bloqueios (<nome do item de dado, lock, transação>) e uma fila de espera
+
+==========================================
+Bloqueio Múltiplo:
+Um esquema de bloqueio múltiplo (read/write ou compartilhado/exclusivo) permite que um item de dado seja acessado por mais de uma transação para leitura.
+
+As operações necessárias são:
+  - read_lock(X): bloqueia o item X para leitura, permitindo que outras transações leiam o item X (bloqueio compartilhado);
+  - write_lock(X): bloqueia o item X para gravação, mantendo o bloqueio sobre o item X (bloqueio exclusivo);
+  - unlock(X): desbloqueia o item X.
+
+A implementação do bloqueio múltiplo requer uma tabela de bloqueios (<nome do item de dado, lock, número de leituras, transações de bloqueio>) e uma fila de espera
+
+
+Para que a técnica de bloqueio múltiplo possa ser usada, uma transação T deve obedecer às seguintes regras:
+  - T deve emitir um read_lock(X) ou write_lock(X) antes que qualquer read_item(X) seja executado em T;
+  - T deve emitir um write_lock(X) antes que qualquer write_item(X) seja executado em T;
+  - T deve emitir um unlock(X) depois que todos os read_item(X) e write_item(X) tenham sido executados em T;
+  - T não emitirá nenhum read_lock(X) ou write_lock(X) se X já estiver bloqueado por T (de forma compartilhada ou exclusiva);
+  - T poderá emitir um unlock(X) apenas se tiver bloqueado X (de forma compartilhada ou exclusiva).
+
+==========================================
+Bloqueio em Duas Fases:
+Para garantir escalonamentos serializáveis, as operações de bloqueio e desbloqueio nas transações devem seguir protocolos.
+
+O protocolo mais usado é o protocolo de bloqueio em duas
+fases (Two-Phase Locking).
+  - Todas as operações de bloqueio (read_lock e write_lock) precedem a primeira operação de desbloqueio (unlock).
+  - As transações são divididas em duas fases:
+      • expansão: quando são emitidos todos os bloqueios;
+      • contração: quando os desbloqueios são emitidos e nenhum
+      novo bloqueio pode ser emitido.
+
+
+Se todas as transações em um escalonamento seguirem o protocolo de bloqueio em duas fases, o escalonamento é garantidamente serializável. Porém, não previne deadlock.

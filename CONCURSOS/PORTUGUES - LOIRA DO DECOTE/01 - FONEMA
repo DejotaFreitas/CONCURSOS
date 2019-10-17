@@ -1,0 +1,200 @@
+Conceitos Fonéticos
+  - Fonema: representação sonora de uma letra ou de um conjunto de letras
+
+EXEMPLO:
+  - problema = problema 8 letras e fonemas
+  - tampa = tãpa = 5 letras 4 fonemas
+  - táxi = taksi = 4 letras e 5 fonemas
+  - quente = ke~te = 6 letras e 4 fonemas
+  - tranquilo = 9 letras e 8 fonemas
+  - comprar = cõprar = 7 letras e 6 fonemas
+  - considerar = cõsiderar = 10 letras 9 fonemas
+  - guerra = gera = 6 letras 4 fonemas
+  - crescer = crecer = 7 letras 6 fonemas
+  - escola = escola = 6 letras e fonemas
+  - exceção = eceção = 7 letras 6 fonemas
+  - exclamação = exclamação = 10 letras e fonemas
+
+DICAS:
+  - X com som de ks produzirá dois fonemas
+  - M e N são usadas para indicar a nasalização da vogal anterior, nesse caso não serão consoante
+  - um mesmo conjunto de letras pode emitir sons diferentes dependendo da palavra
+
+//=====================================================================================
+DÍGRAFO ou DIGRAMA: duas letras que emitem um único som
+  - VOCALICOS: [vogal + (m+n)]
+  - CONSONANTAIS:
+    -- sempre dígrafo: [rr, ss, ch, nh, lh]
+    -- nem sempre dígrafo: [sc, xc, qu, gu]
+
+  - DIFONO: uma letra que representa dois FONEMAS
+    -- TÓXICO = T-O-(K-S)-I-C-O
+    -- sexo = sekso
+
+//=====================================================================================
+ENCONTRO CONSONANTAL: encontro duas consoantes pronunciadas
+  - teste = teste = 5 letras e fonemas 1 encontro consonantal
+  - encontro = e~cõtro = 8 letras 6 fonemas 1 encontro consonantal
+
+  - Encontro consonantal perfeito (próprio ou puro): consoante se mantem mesma sílaba
+    -- claro (cla-ro)
+  - Encontro consonantal imperfeito (impróprio ou disjunto): consoante se separam nas sílabas
+    -- advogado (ad-vo-ga-do);
+
+//=====================================================================================
+
+ENCONTRO VOCALICO: Encontro de duas letras com som de vogal
+  - saiu = sa-iu
+  - farol = farou = fa-rou
+
+DICA:
+  - Cada sílaba só tem uma única vogal sempre e que tem a tonalidade mais forte, o resto e semivogais
+
+ESCALA DE TIMBRE:
+  - A (sempre vogal)
+  - O
+  - E
+  - U | I | M | N | L (entre eles o q vem primeiro é a vogal)
+  - U tremado ex: tranquilo (sempre semivogal)
+
+- som mais perto de A e vocálico
+- se a ordem a sílaba for para baixo é decrescente se não é crescente
+
+
+DITONGO: encontro vogal + semivogal ou  semivogal + vogal na mesma sílaba
+  - tênue = tên-(ue)
+  - amavam = a-ma-v(ão)
+  - bem = b(ei)
+  - papel = pa-p(eu)
+
+  - DITONGO FONÉTICO (M | N | L) (Sempre são decrescente)
+    -- res(ol)veu
+    -- b(em)
+
+DITONGO CRESCENTE: semivogal + vogal
+  - prêmio , salário
+DITONGO DECRESCENTE: vogal + semivogal
+  - ideia, coração
+DITONGO NASAL: [M | N | ~ ] pronunciado pelo nariz
+  - coração, bem
+DITONGO ORAL: pronunciado pela boca (dica: que não seja nasal)
+  - saiu, tranquilo
+DITONGO ABERTO: pronuncia de acento agudo
+  - ideia, herói,
+DITONGO FECHADO: pronuncia de acento circunflexo
+  - feio, boi
+
+TRINTUNGO: encontro de semivogal + vogal + semivogal na mesma sílaba
+  - iguais, paraguai, uruguai, saguões, iguais,
+  - desaguem = de-za-g(uei)
+
+HIATO: encontro de duas vogais em sílabas separadas
+  - sa-í-da, hi-a-to, sa-u-de,
+  - DICA: NÂO é HIATO quando semivogal encontra vogal, ex: i-dei-a = I é semivogal
+
+//======================================================================================
+HOMÔNIMOS: palavras que apresentam mesma grafia ou som
+  - HOMÔNIMOS GRÁFICOS: mesma grafia
+    -- apoio(substantivo)/apoio (verbo), colher(substantivo)/colher (verbo)
+  - HOMÔNIMOS FONÉTICOS: mesma som
+    -- mau/mal, há/a, a fim/afim
+  - HOMÔNIMOS PERFEITOS: mesma grafia e som
+    -- manga(blusa)/manga (fruta), banco(financeiro)/banco(sentar)
+
+PARÔNIMO: palavras parecidas na fonética e na grafia
+  - descrição/discrição
+  - mandado(ordem)/mandato(período de tempo)
+  - descriminar(deixar de ser crime)/discriminar
+  - dispensa(liberar)/despensa(guardar alimentos)
+  - infligir(punir)/infringir(cometer crime)
+  - incipiente(ignorante)/insipiente(iniciante)
+  - conserto(reparos)/concerto(musical ou conciliar)
+  - sessão(reunião, período de tempo)/seção ou secção(repartição, subdivisão)/cessão(doar, ceder)
+  - a fim(finalidade)/afim(afinidade, semelhança)
+  - mal(bem)/mau(bom) ou má(feminino)
+  - há(tempo decorrido)/a
+  - eminente(elevado, importante)/iminente(perto de acontecer)
+  - xeque(duvida, decisão)/cheque(ordem de pagamento)
+  - acético(azedo, vinagre)/ascético(pessoa crente)
+
+POLISSEMIA: possibilidade de se explorar um sentido figurado/conotativo para o vocábulo
+  - jovens devem andar na "linha"
+  - não quero nenhum "abacaxi" pro meu lado
+
+//======================================================================================
+PONTO ARTICULÇÂO DO FONEMAS
+
+Bilabiais: são produzidos na altura dos lábios
+  - /p/	pai
+  - /b/	bola
+  - /m/	mãe
+
+Labiodentais: quando o lábio inferior se aproxima dos dentes superiores
+  - /f/	faca
+  - /v/	vaca
+
+Linguodentais: quando é a língua que atinge os dentes superiores
+  - /t/	tio
+  - /d/	dado
+  - /n/	nada
+
+Alveolares: próximo ao céu da boca
+  - /s/	seda
+  - /z/	zoo
+  - /l/	lua
+  - /r/	caro
+
+Palatais: quando a língua se aproxima do céu da boca, do palato
+  - /x/	xis
+  - /j/	giz
+  - /lh/	lhama
+  - /nh/	nhoque
+
+Velares: sons que se produzem próximo à garganta
+  - /k/	casa
+  - /g/	gude
+  - /rr/	carro
+
+
+Surdos: sons são orais, quando o ar passa livremente pelas cordas vocais
+  - /f/	faca
+  - /s/	seda
+  - /x/	xis
+  - /t/	tio
+  - /k/	casa
+
+Sonoros: quando o ar vibra em razão do estreitamento das cordas vocais situadas na laringe
+- /b/	bola
+- /v/	vaca
+- /z/	zoo
+- /j/	giz
+- /d/	dado
+- /g/	gude
+
+//======================================================================================
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================
+
+
+//======================================================================================

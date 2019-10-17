@@ -1,0 +1,69 @@
+Camadas modelo TCP:
+    4 - Aplicação
+      -- HTTP, HTTPS, FTP, SMTP, POP, DNS, RIP, TELNET(Terminal Emulation)
+    3 - Transporte
+      -- TCP, UDP)
+    2 - Rede, internet
+      -- IP(IPV4, IPV6, ARP, IGMP, ICMP)
+    1 - Interface de Rede, Inter-Rede, Acesso a Rede, Rede Física
+      -- Ethernet, PPP, Token Ring, Frame Relay, ATM
+
+//============================================================
+1 - Camada de Acesso à Rede:
+  - É composta pelo hardware, especificações e características
+dos equipamentos, conectores, interfaces mecânicas e
+elétricas, níveis de tensão, taxa de transmissão e demais
+características físicas.
+  - Nesta camada ficam os protocolos de acesso e
+comunicação pelo meio físico. Existem protocolos de enlace
+para redes locais (LANs) e outros utilizados para redes
+distantes (WANs).
+
+//============================================================
+2 - Camada de Redes:
+  - Nesta camada são definidos e tratados os endereços lógicos
+de origem e de destino na rede, os caminhos que os dados
+irão percorrer para atingir o seu destino e a interconexão de
+múltiplis links (enlaces ou canais de comunicação).
+  - Ela define como transportar dados entre dispositivos que
+não estão localmente conectados, ou seja, que não estão
+fisicamente conectados por um enlace ponto a ponto. Para
+isso utiliza os endereços lógicos de origem e destino
+(endereços IP).
+  - O encaminhamento dos dados até o seu destino é feito por
+roteadores que utilizam tabelas de roteamento para
+encaminhar os dados pelos melhores caminhos (rotas) na
+rede, de acordo com o endereço IP.
+ - Os roteadores fazem o seu trabalho usando tabelas de rotas
+que possuem informações como:
+    -- Endereços de redes;
+    -- Interfaces dos equipamentos que dão acesso ao caminho físico para
+    alcançar a rede de destino;
+    -- Métricas que indicam a distância para a rede de destino.
+ - O roteador possui uma tabela para cada protocolo que trata. Eles
+encaminham os pacotes baseados nas informações do cabeçalho do pacote IP.
+
+//============================================================
+3 - Camada de Transporte
+  - Estabelece uma conexão fim a fim (conexão confiável) entre
+a origem e o destino dos dados.
+  - Garante a integridade dos dados na transmissão, checando
+se não ocorreram perdas de pacotes e se eles estão
+chegando na sequência correta. Solicita a retransmissão de
+pacotes perdidos ou com erro e efetua um controle de fluxo
+do envio dos dados entre a aplicação e a transmissão dos
+dados na rede.
+  - Define como será estabelecida uma sessão (conexão lógica)
+entre as aplicações de duas estações.
+
+//============================================================
+4 - Camada de Aplicação
+  - Camada onde ficam os protocolos responsáveis pela
+comunicação com as diferentes aplicações. Alguns protocolos
+TCP/IP que atuam nesta camada são:
+  -- Telnet (Terminal Emulation);
+  -- FTP (File Transfer Protocol);
+  -- SNMP (Simple Network Management Protocol);
+  -- SMTP (Simple Mail Transfer Protocol);
+  -- HTTP (Hypertext Transfer Protocol);
+  -- DNS (Domain Name System).

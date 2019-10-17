@@ -1,0 +1,127 @@
+SGBD PostgreSQL: Funções, Gatilhos e Procedimentos Armazenados;
+
+==============CREATE DATABASE========================================================
+CREATE DATABASE aula_db
+  WITH ENCODING='UTF8'
+       OWNER=admin_aula
+       CONNECTION LIMIT=-1;
+
+=============CREATE TABLE=========================================================
+CREATE TABLE films (
+    code        char(5) CONSTRAINT firstkey PRIMARY KEY,
+    title       varchar(40) NOT NULL,
+    did         integer NOT NULL,
+    date_prod   date,
+    kind        varchar(10),
+    len         interval hour to minute
+);
+
+CREATE TABLE empregados(
+  nome_emp text,
+  salario int4,
+  codigo int4 NOT NULL,
+  departamento_cod int4,
+  CONSTRAINT empregados_pkey PRIMARY KEY (codigo),
+  CONSTRAINT empregados_departamento_cod_fkey FOREIGN KEY (departamento_cod)
+      REFERENCES departamentos (codigo) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
+
+===============INSERT=======================================================
+INSERT INTO films VALUES ('UA502', 'Bananas', 105, '1971-07-13', 'Comedy', '82 minutes');
+
+INSERT INTO films (code, title, did, date_prod, kind)
+    VALUES ('T_601', 'Yojimbo', 106, '1961-06-16', 'Drama');
+
+===============UPDATE=======================================================
+UPDATE films SET kind = 'Dramatic' WHERE kind = 'Drama';
+
+==============DELETE========================================================
+DELETE FROM films WHERE kind <> 'Musical';
+
+===============TRIGGER=======================================================
+CREATE OR REPLACE FUNCTION process_emp_audit() RETURNS TRIGGER AS $emp_audit$
+    BEGIN
+        IF (TG_OP = 'DELETE') THEN
+            INSERT INTO emp_audit SELECT 'D', now(), user, OLD.*;
+            RETURN OLD;
+        ELSIF (TG_OP = 'UPDATE') THEN
+            INSERT INTO emp_audit SELECT 'U', now(), user, NEW.*;
+            RETURN NEW;
+        ELSIF (TG_OP = 'INSERT') THEN
+            INSERT INTO emp_audit SELECT 'I', now(), user, NEW.*;
+            RETURN NEW;
+        END IF;
+        RETURN NULL; -- result is ignored since this is an AFTER trigger
+    END;
+$emp_audit$ LANGUAGE plpgsql;
+
+CREATE TRIGGER emp_audit
+AFTER INSERT OR UPDATE OR DELETE ON emp
+    FOR EACH ROW EXECUTE PROCEDURE process_emp_audit();
+
+=============FUNCTION=========================================================
+CREATE or REPLACE FUNCTION data_ctl(opcao char, fdata date, fhora time) RETURNS char(10) AS $$
+DECLARE
+    opcao ALIAS FOR $1;
+    vdata ALIAS FOR $2;
+    vhora ALIAS FOR $3;
+    retorno char(10);
+BEGIN
+    IF opcao = 'I' THEN
+	insert into datas (data, hora) values (vdata, vhora);
+        retorno := 'INSERT';
+    END IF;
+    IF opcao = 'U' THEN
+	update datas set data = vdata, hora = vhora where data='1995-11-01';
+        retorno := 'UPDATE';
+    END IF;
+    IF opcao = 'D' THEN
+	delete from datas where data = vdata;
+        retorno := 'DELETE';
+    ELSE
+        retorno := 'NENHUMA';
+    END IF;
+    RETURN retorno;
+END;
+$$
+LANGUAGE plpgsql;
+
+select data_ctl('I','1996-11-01', '08:15');
+select data_ctl('U','1997-11-01','06:36');
+
+==========Stored Procedures====================================================
+CREATE OR REPLACE FUNCTION add_city(city VARCHAR(70), state CHAR(2))
+  RETURNS void AS $$
+  BEGIN
+    INSERT INTO cities VALUES (city, state);
+  END;
+  $$ LANGUAGE plpgsql;
+
+========================
+CREATE OR REPLACE FUNCTION show_cities_multiple2(ref1 refcursor, ref2 refcursor)
+   RETURNS SETOF refcursor AS $$
+    BEGIN
+      OPEN ref1 FOR SELECT city, state FROM cities WHERE state = 'CA';
+      RETURN NEXT ref1;
+      OPEN ref2 FOR SELECT city, state FROM cities WHERE state = 'TX';
+      RETURN NEXT ref2;
+    END;
+$$ LANGUAGE plpgsql;
+
+BEGIN;
+  SELECT show_cities_multiple2('ca_cur', 'tx_cur');
+  FETCH ALL IN "ca_cur";
+  FETCH ALL IN "tx_cur";
+COMMIT;
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================
+======================================================================

@@ -1,0 +1,144 @@
+//==========================QUESTAO===============================\\
+
+Carlos alberto possui um numero de selas compreendidos entre 150 a 200. agrupando de 12 em 12 15 em 15 36 em 36 sempre sobram 10 quantos ele tem ?
+a) 155.
+b) 160.
+c) 170.
+d) 185.
+e) 190.
+//=========RESOLUCAO===========\\
+12 , 15, 36 / 3
+4 , 5 , 12 / 4
+1 , 5 , 3 / 3
+1 , 5 , 1 / 5
+1 , 1 , 1
+
+3*4*3*5 = 180
+180 + 10 = (190)
+
+//==========================QUESTAO===============================\\
+
+O valor de um carro novo é de R$ 9.000,00 e, com 4 anos de uso, é de R$ 4.000,00. Supondo que o preço caia com o tempo, segundo uma linha reta, o valor de um carro com 1 ano de uso é:
+a) R$ 8.250,00
+b) R$ 8.000,00
+c) R$ 7.750,00
+d) R$ 7.500,00
+e) R$ 7.000,00
+//=========RESOLUCAO===========\\
+  (4000-9000)/(4-0) = -1250
+  -1250 + 9000 = 7750
+
+//==========================QUESTAO===============================\\
+
+Em 3 horas, 4 torneiras despejam 4200 litros de água. Em quantas horas 5 dessas torneiras despejam 7000 litros de água?
+a) 2.
+b) 4.
+c) 6.
+d) 8.
+e) 10.
+//=========RESOLUCAO===========\\
+Horas    Nº de torneiras   Quantidade de litros
+  3      4                 4200
+  x      5                 7000
+
+  x . 5 . 4200 = 3 . 4 . 7000
+  21000x= 84000
+  x= 84000:21000
+  x=4 horas
+
+//==========================QUESTAO===============================\\
+
+Em uma construtora, 40 empregados, trabalhando 8horas por dia, conseguem pavimentar 2 km de uma avenidaem 24 dias. Quantos dias gastarão 30 empregados,trabalhando 12 horas por dia, para pavimentarem 3 km dessaavenida?
+a) 32.
+b) 35.
+c) 20.
+d) 36.
+e) 42.
+//=========RESOLUCAO===========\\
+x . 30 . 12 . 2 = 24 . 40 . 8 . 3
+720x = 23040
+x =  23040/720 = 32
+
+//==========================QUESTAO===============================\\
+
+Um produto teve seu preço reajustado de R$25,00 pra R$32,00,
+Qual é a taxa percentual de aumento ?
+//=========RESOLUCAO===========\\
+25 → 100%
+7(32-25)  → x%
+
+x=100.7/25 x=700/25 x=28%
+
+//==========================QUESTAO===============================\\
+
+Um equipamento tem seu preço reajustado de R$2.750,00 para R$3.080,00. Neste caso, o percentual de acrescimo foi:
+a) 14%.
+b) 12%.
+c) 10%.
+d) 16%.
+e) 20%.
+//=========RESOLUCAO===========\\
+3080/2750 = 1,12
+O 1 representa o inteiro, ou 100%.
+Já o 0,12 representa o acréscimo, que multiplicado por cem = 12%
+
+//==========================QUESTAO===============================\\
+
+A quantia resultante da aplicação que fiz de R$ 5.000,00
+à taxa de 1,00% a.m., durante 5 meses, em (regime de juros
+simples) é
+a) R$ 5.250,00
+b) R$ 5.300,00
+c) R$ 5.900,00
+d) R$ 5.180,00
+e) R$ 5.340,00
+//=========RESOLUCAO===========\\
+5.000,00 . 1,00% = 50
+durante 5 meses 50 . 5 = 250,00
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\
+
+
+//==========================QUESTAO===============================\\
+
+
+//=========RESOLUCAO===========\\

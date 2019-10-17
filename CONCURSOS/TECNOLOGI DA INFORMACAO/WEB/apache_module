@@ -1,0 +1,5 @@
+Conector AJP:
+  - Quando o servidor é instalado, a configuração inicial do Tomcat contém um conector que recebe pedidos de HTTP utilizando AJP (Apache Jserv Protocol). Embora o Tomcat seja capaz de recebe pedidos de HTTP diretamente da rede, esse conector permite que o Tomcat receba pedidos de software em uma camada inferior. Por exemplo, o Tomcat pode receber pedidos de servidores da Web (como o Apache HTTP Server), servidores proxy e sistemas de balanceamento de carga que suportem os protocolos AJP.
+
+
+o contrário do mod_jk, mod_cluster não requer o AJP. Conexões para nós do servidor de aplicativos podem usar HTTP, HTTPS ou AJP.

@@ -1,0 +1,24 @@
+// MODELOPOR CONCEITUAL
+- Fala do conceito e definição de algo divididos em subtemas, mostra conhecimento de conteúdo especifico
+- temas com 3 fatores a serem falados, escrever na ordem cronológica ou de execução dos temas:
+    -- EXEMPLO: Administração: 1° Estratégico, 2° Tático, 3° Operacional
+
+
+//===================================
+// INTRODUÇÂO
+FRASE 1: Recorte, tema + verbo + avaliação
+FRASE 2: Apresentação dos problemas X, Y e Z
+
+// DESENVOLVIMENTO
+FRASE 3: Em relação a ____, ...
+FRASE 4: ... visa ...
+
+FRASE 5: No que se refere a ____, ...
+FRASE 6: Em contrapartida,  ...
+
+FRASE 7: Já ____ ....
+FRASE 8: ... objetiva ...
+
+// CONCLUSÂO
+FRASE 9: Desse modo, posicionamento + verbo + tema
+FRASE 10: Relacionar X, Y, e Z ou ressaltar pontos em comum

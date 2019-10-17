@@ -1,0 +1,35 @@
+
+Stored Procedure ou Procedimento armazenado: são rotinas ou sub-rotinas de bancos relacionais
+    - podem ser usados para validações de dados
+
+    - Reduza o número de viagens de ida e volta entre servidores de aplicativos e bancos de dados. Todas as instruções SQL são agrupadas dentro de uma função armazenada no servidor de banco de dados PostgreSQL, portanto, o aplicativo só precisa emitir uma chamada de função para recuperar o resultado, em vez de enviar várias instruções SQL e aguardar o resultado entre cada chamada.
+
+    - Aumente o desempenho do aplicativo porque as funções definidas pelo usuário são pré-compiladas e armazenadas no servidor de banco de dados PostgreSQL.
+
+    - Ser capaz de reutilizar em muitos aplicativos. Depois de desenvolver uma função, você pode reutilizá-la em qualquer aplicativo.
+
+
+// criar procedimento de retornar o string com preço dos livros
+CREATE PROCEDURE verPreco (idLivro smallint)
+SELECT CONCAT('O preço do livro é: ', preco_livro) AS Preço
+FROM tbl_livro
+WHERE id_livro = idLivro;
+
+
+// chamar Procedimento
+CALL verPreco(3);
+
+// excluir procedimento
+DROP PROCEDURE verPreco;
+
+//=================================OU====================================
+
+// delimitador posibilita executar vários select em um procedimento, depois retorne DELIMITADOR devolta ao ponto e virgula;
+
+DELIMITADOR $$
+CREATE PROCEDURE verPreco (idLivro smallint)
+BEGIN
+  SELECT CONCAT('O preço do livro é: ', preco_livro) AS Preço FROM tbl_livro WHERE id_livro = idLivro;
+  SELECT 'Select executado com sucesso!!!';
+END$$
+DELIMITADOR;

@@ -1,0 +1,96 @@
+// MODELO CAUSA CONSEQUENCIA
+- indicado para temas da atualidade, problemas sociais (lixo, agua, tecnologia, urbanização)
+- usado no DESENVOLVIMENTO
+      - Divisão Tema
+          - D1: causa e consequência
+          - D2: causa e consequência
+      - Tema Único
+          - D1: CAUSA
+          - D2: CONSEQUENCIA
+              ou
+          - D1: causa e consequência
+          - D2: causa e consequência
+
+
+//===============DIVISAO TEMA====================
+// INTRODUÇÂO
+FRASE 1: Recorte, tema + verbo + avaliação
+FRASE 2: apresentação de subtemas X e Y motivação tem motivações
+
+// DESENVOLVIMENTO
+FRASE 3: Em relação a X, ... (posicionamento)
+FRASE 4: Umas das causas ...
+FRASE 5: Como reflexo, ...
+
+FRASE 6: No que diz respeito a Y,  ... (posicionamento)
+FRASE 7: Uma das justificativas ....
+FRASE 8: Em função disso, ...
+
+// CONCLUSÂO
+FRASE 9: Desse modo, posicionamento + verbo + tema
+FRASE 10: Espera-se que X e Y (propor solução)
+
+
+//===============TEMA UNICO 1====================
+// INTRODUÇÂO
+FRASE 1: Recorte, tema + verbo + avaliação
+FRASE 2: Entende-se por + tema ... (conceito)
+
+// DESENVOLVIMENTO
+FRASE 3: Uma das justificativas, ...
+FRASE 4: Umas das causas ...
+FRASE 5: Como exemplo, pode-se citar ... || Além disso, ...
+
+FRASE 6: Em função disso,  ...
+FRASE 7: Outro fator ....
+FRASE 8: ainda pode-se considerar, ... || exemplo + justifica esse situação
+
+// CONCLUSÂO
+FRASE 9: Desse modo, posicionamento + verbo + tema
+FRASE 10: Espera-se que ... (propor uma ação geral)
+
+
+//===============TEMA UNICO 1====================
+// INTRODUÇÂO
+FRASE 1: Recorte, tema + verbo + avaliação
+FRASE 2: Entende-se por + tema ... (conceito)
+
+// DESENVOLVIMENTO
+FRASE 3: Uma das justificativas, ...
+FRASE 4: Como reflexo ...
+FRASE 5: Como exemplo, pode-se citar ... || Além disso, ...
+
+FRASE 6: Em relação a _____, uma das causa ...
+FRASE 7: Em função disso ....
+FRASE 8: exemplo ...
+
+// CONCLUSÂO
+FRASE 9: Desse modo, posicionamento + verbo + tema
+FRASE 10: Espera-se que ... (propor uma ação geral)
+
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-
+
+-

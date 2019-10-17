@@ -1,0 +1,25 @@
+Entidades: Os objetos ou partes envolvidas um domínio, também chamados de entidades, podem ser classificados como físicos ou lógicos, de acordo sua existência no mundo real.
+
+
+Podemos classificar as entidades segundo o motivo de sua existência:
+
+    Entidades fortes: são aquelas cuja existência independe de outras entidades, ou seja, por si só elas já possuem total sentido de existir. Em um sistema de vendas, a entidade produto, por exemplo, independe de quaisquer outras para existir.
+
+    Entidades fracas: ao contrário das entidades fortes, as fracas são aquelas que dependem de outras entidades para existirem, pois individualmente elas não fazem sentido. Mantendo o mesmo exemplo, a entidade venda depende da entidade produto, pois uma venda sem itens não tem sentido.
+
+    Entidades associativas: esse tipo de entidade surge quando há a necessidade de associar uma entidade a um relacionamento existente.
+
+
+Atributos são as características que descrevem cada entidade dentro do domínio:
+
+    Descritivos: representam característica intrínsecas de uma entidade, tais como nome ou cor.
+
+    Nominativos: além de serem também descritivos, estes têm a função de definir e identificar um objeto. Nome, código, número são exemplos de atributos nominativos.
+
+    Referenciais: representam a ligação de uma entidade com outra em um relacionamento. Por exemplo, uma venda possui o CPF do cliente, que a relaciona com a entidade cliente.
+
+Quanto à sua estrutura, podemos ainda classificá-los como:
+
+    Simples: um único atributo define uma característica da entidade. Exemplos: nome, peso.
+
+    Compostos: para definir uma informação da entidade, são usados vários atributos. Por exemplo, o endereço pode ser composto por rua, número, bairro, etc.

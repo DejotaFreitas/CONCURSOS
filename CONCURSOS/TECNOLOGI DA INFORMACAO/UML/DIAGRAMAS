@@ -1,0 +1,48 @@
+//============================================================
+Diagramas UML 2.5
+
+Um diagrama UML é uma representação gráfica parcial (exibição) de um modelo de um sistema em design, implementação ou já existente. O diagrama UML contém elementos gráficos (símbolos) - nós UML conectados com arestas (também conhecidos como caminhos ou fluxos) - que representam elementos no modelo UML do sistema projetado. O modelo UML do sistema também pode conter outra documentação, como casos de uso escritos como textos modelados.
+
+A especificação UML define dois tipos principais de diagrama UML: diagramas de estrutura e diagramas de comportamento .
+
+//============================================================
+Os diagramas de estrutura mostram a estrutura estática do sistema e suas partes em diferentes níveis de abstração e implementação e como eles estão relacionados entre si. Os elementos em um diagrama de estrutura representam os conceitos significativos de um sistema e podem incluir conceitos abstratos, reais e de implementação.
+
+  - Diagrama de Classe (classe, interface, recurso, restrição, associação, generalização, dependência)
+  - Diagrama de Objetos (especificação de instância, objeto, slot, link)
+  - Diagrama de pacotes (pacote, elemento empacotável, dependência, importação de elemento, importação de pacote, mesclagem de pacote)
+    -- Diagrama de Modelo (modelo, pacote, elemento empacotável, dependência)
+  - Diagrama de Estrutura Composta
+    -- Diagrama de Estrutura Interna (classe estruturada, parte, porta, conector, uso)
+    -- Diagrama de Colaboração (colaboração, conector, parte, dependência)
+  - Diagrama de Componentes (componente, interface, interface fornecida, interface necessária, classe, porta, conector, artefato, realização de componente, uso)
+    -- Diagrama de Manifestação (manifestação, componente, artefato)
+  - Diagrama de implantação (implementação, artefato, destino de implementação, nó, dispositivo, ambiente de execução, caminho de comunicação, especificação de implementação)
+    -- Diagrama de Arquitetura de rede (nó, switch, roteador, balanceador de carga, firewall, caminho de comunicação, segmento de rede, backbone)
+    -- Diagrama de Manifestação
+  - Diagrama de perfil (perfil, metaclasse, estereótipo, extensão, referência, aplicação de perfil)
+
+//============================================================
+Os diagramas de comportamento mostram o comportamento dinâmico dos objetos em um sistema, que pode ser descrito como uma série de mudanças no sistema ao longo do tempo .
+
+  - Diagrama de Caso e Uso (caso de uso, ator, assunto, estender, incluir, associação)
+  - Diagrama de Fluxo de Informação (fluxo de informação, item de informação, ator, classe)
+  - Diagrama de Atividades (atividade, partição, ação, objeto, controle, borda de atividade)
+    -- Diagrama de Visão Geral de Interação
+  - Diagrama de Estado de maquina
+    -- Diagrama de Estado de maquina de Comportamento (estado comportamental, transição comportamental, pseudo-estado)
+    -- Diagrama de Estado de maquina de Protocolo (estado do protocolo, transição de protocolo, pseudostato)
+  - Diagrama de Interação
+    -- Diagrama de Sequencia (linha de vida, especificação de execução, mensagem, fragmento combinado, uso de interação, invariante de estado, ocorrência de destruição)
+    -- Diagrama de Comunicação (linha de vida, mensagem)
+    -- Diagrama de temporal (linha de vida, estado ou condição, cronograma, evento de destruição, restrição de duração, restrição de tempo)
+    -- Diagrama de Visão Geral de Interação (nó inicial, nó final de fluxo, nó final de atividade, nó de decisão, nó de mesclagem, nó de garfo, nó de junção, interação, uso de interação, restrição de duração, restrição de tempo)
+
+
+
+//============================================================
+
+
+
+
+//============================================================

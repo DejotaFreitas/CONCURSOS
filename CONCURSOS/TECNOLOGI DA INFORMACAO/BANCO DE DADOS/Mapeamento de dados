@@ -1,0 +1,40 @@
+
+Tipo-Relacionamento (1:1)
+
+  //cada tabela tem um identifcar do outra tabela
+
+  empregado (CPF_empregado, nome_empregado, sigla_depto)
+  departamento (sigla_depto, nome_depto, CPF_empregado)
+
+=============================================================================
+Tipo-Relacionamento (1:n)
+
+  // a chave primaria de um tem q esta da outra tabel
+
+  empregado (CPF_empregado, nome_empregado, sigla_depto)
+  departamento (sigla_depto, nome_depto)
+
+=============================================================================
+Tipo-Relacionamento (m:n)
+
+  // tem uma tabela que une as chaves primaria das outras duas tabelas
+
+  empregado (CPF_empregado, nome_empregado)
+  projeto (nro_projeto, nome_projeto)
+  desenvolve (CPF_empregado, nro_projeto, horas_trabalhadas)
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================
+
+=============================================================================

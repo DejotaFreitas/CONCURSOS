@@ -1,0 +1,155 @@
+Vetores
+  - Mantêm uma série de elementos sequenciais mantidos em uma ordem linear como um único,
+  porém, com possibilidade de acesso individual;
+  - Cada elemento possui um índice que indica sua posição no vetor e permite acessá-lo diretamente;
+  - Vetores tem tamanhos fixos
+
+Métodos de Pesquisa
+  - Pesquisa Sequencial
+  - Pesquisa Binária
+
+Pesquisa Sequencial:
+  - Dada uma chave k, compará-la a cada chave no  vetor, caso haja uma igual, a chave está no vetor
+  - Caso todas as chaves tenham sido comparadas e não houve nenhuma igual, a chave não existe no vetor
+
+Assume que as chaves estão ordenadas
+  - A partir disto, é possível diminuir o espaço de busca, restringindo-o por faixas de valores.
+  - Divide-se o problema ao meio seguidas vezes, até que a chave desejada seja encontrada ou determine-se sua inexistência
+
+
+Ordenação Interna
+  - Todas as chaves na memória principal: facilidade de acesso.
+
+Ordenação externa
+  - Chaves na memória principal e em memória externa: movimentação de chaves entre as duas
+
+================================================================================
+Métodos de Ordenação
+  - Bubble Sort (Método Bolha)
+  - Insertion Sort (Método de Inserção)
+  - Selection Sort (Método de Seleção)
+  - Quicksort
+  - Heapsort
+  - Bucket Sort (Bin Sort)
+  - Radix Sort
+  - Merge Sort (Ordenação por Intercalação)
+
+
+
+===================================
+Bubble Sort (Método Bolha)
+  - O método mais simples:
+  - Suponha chaves em um vetor vertical A. Valores baixos são “leves” e valores altos são “pesados”.  Como bolhas, os valores “leves” sobem no vetor um por vez, ao passo que os “pesados” descem.
+  - Tipo de Ordenação: Interna.
+  - Complexidade: O(n**2).
+  - Quantidade de dados: Poucos.
+  - Especificidades: Complexidade fixa e código compacto.
+  - Estabilidade: Sim.
+  - Adaptabilidade: Não. A implementação clássica realiza a mesma quantidade de operações mesmo   se as chaves já estiverem ordenadas.
+
+===================================
+Insertion Sort (Método de Inserção)
+  - Analogia com a organização de cartas de baralho na mão;
+  - Cartas são recebidas e colocadas na mão aleatoriamente;
+  - Durante a organização, cada carta é colocada no seu lugar certo, uma por vez, deslocando as demais.
+  - Tipo de Ordenação: Interna.
+  - Complexidade: O(n**2).
+  - Quantidade de dados: Poucos.
+  - Especificidades: A complexidade, apesar de alta, não é fixa.
+  - Estabilidade: Sim.
+  - Adaptabilidade: Sim.
+
+===================================
+Selection Sort (Método de Seleção)
+  - Princípio simples;
+  - A cada iteração procura a chave de menor valor ainda não ordenada;
+  - Depois de encontrada, ela é inserida na posição correta do vetor
+  - Tipo de Ordenação: Interna.
+  - Complexidade: O(n2).
+  - Quantidade de dados: Poucos.
+  - Especificidades: A complexidade é fixa.
+  - Estabilidade: Depende da implementação. A apresentada é estável.
+  - Adaptabilidade: Não.
+
+===================================
+Quicksort
+  - Provavelmente o mais eficiente para ordenação interna;
+  - Baseado no paradigma “Dividir-e-Conquistar”;
+  - Divide o problema original em problemas menores, semelhantes.
+  - Procedimento recursivo;
+  - Complexidade varia com o caso;
+  - Funcionamento não trivial como os anteriores
+
+Três passos básicos:
+  - Dividir: Escolha uma chave pivô e divida o vetor em dois subvetores (possivelmente vazios) tal que as chaves do subvetor à esquerda sejam menores que a chave pivô, que por sua vez é menor que as chaves do subvetor à direita;
+  - Conquistar: Ordene os subvetores recursivamente, dividindo-os também;
+  - Combinar: Uma vez que todos os subvetores estejam ordenados, o vetor original também estará.
+
+  -Tipo de Ordenação: Interna.
+  - Complexidade: O(n2) no pior caso e O(nlogn) no melhor caso e também no caso médio.
+  - Quantidade de dados: Muitos.
+  - Especificidades: Estratégias de seleção de pivô e partição podem influenciar o tempo de execução. Apesar de ser quadrático no pior caso, o caso médio justifica sua utilização.
+  - Estabilidade: Depende da partição. A versão apresentada é instável. Uma versão in place é estável. Infelizmente, métodos eficientes são instáveis.
+  - Adaptabilidade: Não.
+
+===================================
+Merge Sort
+Baseado em dois procedimentos:
+  - MERGE: Cria dois subvetores, cada um  correspondente a uma metade do vetor original, depois intercala os menores valores, copiando-os de volta ao vetor original;
+  - MERGE_SORT: Divide o problema original em subproblemas, e usa o procedimento anterior para resolvê-los.
+  - Divide o vetor ao meio recursivamente até que não seja mais possível
+  - Subvetor com apenas uma chave.
+  - Na volta das chamadas recursivas, combina e  ordena os últimos 2 subvetores
+  - Na primeira vez, dois subvetores de apenas uma  chave.
+  - Os subvetores vão aumentando de tamanho, até formar o vetor original.
+
+  - Tipo de Ordenação: Interna/Externa.
+  - Complexidade: Θ(nlogn).
+  - Quantidade de dados: Muitos.
+  - Especificidades: Alto consumo de memória, devido às várias chamadas recursivas.
+  - Estabilidade: Sim.
+  - Adaptabilidade: Não
+
+===================================
+
+
+===================================
+
+
+===================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================
+
+
+================================================================================

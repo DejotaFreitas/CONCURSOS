@@ -1,0 +1,132 @@
+- texto deve ser impessoal
+- texto deve ser objetivo
+
+//==================================================================================
+- não utilizar expressões vagas
+- não utilizar adjetivos desnecessários
+- não utilizar advérbios terminados mente com sentido de opinião ou adjetivo
+
+//==================================================================================
+- texto tem ser escrito na norma culta explorando o sentido denotativo dos vocábulos
+- não utilizar sentido figura
+    - errado: a (guerra) contra as drogas
+      - correto: as politicas publicas o trafego de drogas
+      - correto: as políticas publicas de oposição ao trafego de drogas
+      - correto: as intervenções do governo no sentido de coibir ações criminosas
+    - errado: (caminho) para um mundo melhor
+    - errado: a (chave) para a paz
+    - errado: a (porta) para futuro
+
+- não utilizar ditado popular:
+    - agua mole pedra dura tanto bate ate que fura
+
+- não interagir com o leitor
+    - errado: ao final será que existe alguma salvação para brasil ?
+    - (você) certamente já foi vitima da criminalidade
+
+- não utilizar clichês
+
+- não utilizar jargões desnecessários (palavras específica da área)
+
+- não utilizar coloquialismo:
+    -  verbo (ter = errado) no lugar de (haver = certo)
+    - (dar para = errado), quem dar, dar (a) alguém
+
+- não utilizar palavras em desuso, antigas
+
+- não utilizar palavras que ninguém sabe, pouco utilizada
+
+- não utilizar citações
+
+//==================================================================================
+- não utilizar uma palavra mais de uma vez em uma frase
+
+- não utilizar redundância:
+    - (criação) de (novos) empregos
+          -criar já é algo novo
+
+- não informar a mesma coisa duas vezes, pior ainda se for em seguida.
+
+- não utilizar redundância de cognatos
+    - no brasil, os brasileiros... (certo = no Brasil, a população...)
+
+- não utilizar rimas
+
+//==================================================================================
+ - só coloca título se for pedindo
+- título não deve ter verbo de jeito nenhum
+- título deve ter duas ou três palavras com iniciais maiúsculas ( Crise Política Brasileiro )
+- título deve ser centralizado caso não tenha um local específico para ele
+- ao copiar o tema da redação, colocar entre aspas duplas
+- pode saltar linha entre título e o texto, mas não deve
+
+
+- texto tem que ter espaço do paragrafo igual para todos parágrafos
+- texto deve ser justificado, para inicio e final ficarem alinhados
+- preencha 90% do espaço das linhas (25 a 30 = 27 linhas, 20 a 25 = 23 linhas)
+- não deve ficar monossílaba ao dividir palavra entre linhas
+
+- se escrever em letra de forma, deve fazer distinção de letra maiúsculo e minúscula
+- só escrever t cortado em cima se for T maiúsculo
+- escreva de forma distinta: m e n, eh e i, a e o
+
+- se errar uma letra na palavra, sobreponha a letra errada, não risque a palavra
+- se errar a palavra, risque a palavra e coloque a nova na frente
+
+
+//==================================================================================
+
+- não faça paragrafo com apenas uma frase
+- um período (até um ponto final) deve ter no máximo 3 linhas
+-
+
+//==================================================================================
+- usar conector conclusivo somente na conclusão está errado (dessa forma, então, assim, logo, desse modo)
+- não usar conector de oposição na conclusão (entretanto, com tudo, todavia, mas, )
+- não utilizar conector e
+- usar o QUE demais, máximo 2 QUE por frase
+- não repetir o mesmo conector na redação
+
+//==================================================================================
+- não utilizar o verbo SER demais (é, ser)
+    - substitua por: acarreta, ocasiona, minimiza, atenua, implicar, visa
+
+
+//==================================================================================
+- falar coerentemente:
+    - Para acabar com a corrupção....(não tem como acabar)
+        -Certo: para reduzir a corrupção...
+
+
+- evitar artigo categórico (seja flexível no argumento)
+    - Errado: (O) problema do brasil
+    - Certo: um problema brasileiro
+
+- não iniciar frase com gerúndio, nem usa-lo depois da virgula
+
+- não utilizar palavra através, use: por meio de, com
+
+- não utilizar palavra expressões: ou seja, isto é (duplicação de informação)
+
+- não utilizar parênteses () (redundância de informação)
+
+- não utilizar ONDE: onde é só para lugares
+    - utilize: NAS QUAIS, QUE, O QUAL
+
+
+//==================================================================================
+
+-não escrever de forma vaga, principalmente na introdução.
+    - fale do tema diretamente no inicio da introdução
+
+- não generalizar de forma alguma, não utilizar todo, nunca, nada, sempre, nenhum, ninguem, qualquer, jamais, tudo,
+    errado: governo não criar politicas publicas parra ....
+    certo:  grande parte das politicas publicas que objetivam ... não surtem o efeito desejado pelo governantes.
+
+- ao utilizar referencia eles, verificar se referenciado também esta no plural
+
+- cuidado palavras duplo sentido: coma a dilma
+
+- não se contradiga
+
+- fala de coisa que está contido no contexto geral, e não de situações que são exceções

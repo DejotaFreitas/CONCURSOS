@@ -1,0 +1,14 @@
+
+
+//===================================
+// INTRODUÇÂO
+FRASE 1: Retomada do caso
+FRASE 2: Retomada do caso + Resposta
+
+// DESENVOLVIMENTO
+PARAGRAFO 2: Tópicos ou fundamentos possíveis
+PARAGRAFO 3: Tópicos ou fundamentos possíveis
+
+// CONCLUSÂO
+FRASE 9: Desse modo, retomada da resposta
+FRASE 10: Retomada de Argumentos

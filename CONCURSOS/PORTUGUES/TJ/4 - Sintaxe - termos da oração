@@ -1,0 +1,126 @@
+//======================================================================================
+//======================================================================================
+TERMOS DA ORAÇÃO - PERIODO SIMPLES
+
+PREDICADO: retirando-se o sujeito da frase o restante é o predicado
+
+//======================================================================================
+EXEMPLO:
+- [Não se trata(VTI) de um exemplo isolado]
+- [Ainda se(PA) questiona(VTD)] a atitude do governador
+- [Para alguns], a vida [é cheia de alegria]
+- [Questionamento(OD) sempre houve(VTD)]
+
+//======================================================================================
+CLASSIFICAÇÂO DO PREDICADO:
+
+PREDICADO VERBAL:
+  - NUCLEO: verbos intransitivos, transitivo direto, transitivo indireto e transitivo direto e indireto
+  - não apresenta predicativo
+
+PREDICADO NOMINAL:
+  - verbo de ligação
+  - NUCLEO: predicativo do sujeito
+
+PREDICADO VERBO-NOMINAL:
+  - NUCLEO: verbos intransitivos, transitivo direto, transitivo indireto e transitivo direto e indireto
+  - NUCLEO: predicativo do sujeito ou do objeto
+
+//======================================================================================
+EXEMPLOS PREDICADO VERBAL:
+  - O juiz(sujeito) julgou(VTD) o réu(OD) = (não tem predicativo)
+  - O problema(sujeito) esta(VI) na cabeça de todos brasileiro(AAdv de lugar)
+  - O país(sujeito) permaneceu(VI) em estado de alerta(AAdv de modo)
+  - O problema [foi {avaliado}](na voz passiva não existe verbo de ligação)
+
+EXEMPLOS PREDICADO NOMINAL:
+  - O réu(sujeito) era(VL) culpado(predicativo) = (contem verbo de ligação)
+  - A situação de hoje(sujeito) é(VL) essa(predicativo)
+  - Ninguém(sujeito) se torna(VL) um exemplo(predicativo), por acaso(AAdv)
+
+
+EXEMPLOS PREDICADO VERBO-NOMINAL:
+  - O juiz(sujeito) julgou(VTD) o réu(OD) culpado(predicado) = (tem predicativo e não tem verbo de ligação)
+  - O governo(sujeito) se(me) considerava(VTD) capaz(predicativo objeto -> me) disso(complemento nominal)
+  - O rapaz(sujeito) foi considerado inocente(predicativo) pelos jurados(agente da passiva)
+
+//======================================================================================
+
+//======================================================================================
+SUJEITO:
+  - PARA IDENTIFICA O SUJEITO USE, O QUE ? ou QUEM ? (nunca usar "A QUEM")
+    -- cabe aos trabalhadores [{decidirem}(sujeito oracional) o caminho do pais]
+      --- O QUE cabe(verbo) ? = sujeito = decidirem o caminho do pais
+
+  - O NUCLEO DO SUJEITO NAO PODE SER PREPOSICIONADO
+    -- [nenhum(núcleo) de(preposição) nós] sabe a verdade
+    -- [15%(núcleo) dos(preposição) produtos] apresentaram defeito
+
+  - O SUJETO PODE SER REPRESENTADO POR, NOME, PRONOME OU ORAÇÃO
+    -- ocorreu [um movimento assustador](NOME) por aqui
+    -- é importante [que o homem desenvolva seu espirito](ORAÇÂO)
+    -- [isso](PRONOME) não é prudente em momento algum
+
+  -- O SUJEITO PODE PRATICAR, SOFRER OU PRATICAR E SOFRER A AÇÃO VERBAL
+
+//======================================================================================
+
+CLASSIFICAÇÂO:
+
+- EXISTENTE: pode ou não ser identificado pelo contexto
+  -- DETERMINADO: pode ser identificado pelo contexto ainda que esteja subentendido
+    --- SIMPLES: apresenta apenas um núcleo
+      ---- EXPRESSIVO: obrigatoriamente o núcleo estará escrito na frase
+      ---- DESINENCIAL: não está escrito na frase mas pode ser identificado pelo contexto(verbo)
+    --- COMPOSTO: constituído a partir de mais de um núcleo
+    --- ORACIONAL OU ORAÇÃO SUBJETIVA: apresenta verbo
+  -- INDETERMINADO: o sujeito existe, mas não pode ser identificado, nem mesmo pelo contexto
+    --- PARTICULA SE: o SE tem que ser ÍNDICE DE INDETERMINAÇÃO DO SUJEITO
+    --- 3° PESSOA DO PLURAL SEM REFERENTE:
+    --- INFINITIVO IMPESSOAL:
+
+- INEXISTENTE: a mesma coisa  que oração sem sujeito, formado por verbos impessoais
+  -- HAVER(EXISTENCIAL)(3° PESSOA SINGULAR)
+    --- Solução(OD) havia(VTD)
+  -- HAVER | FAZER (TEMPO)(3° PESSOA SINGULAR)
+    --- Faz dois anos
+  -- FENOMENO NATURAIS(3° PESSOA SINGULAR)
+    --- choveu muito hoje
+  -- ESTAR | FAZER FENOMENO NATURAL(3° PESSOA SINGULAR)
+    --- estar frio
+    --- faz calor
+  -- CHEGA DE | BASTA DE(NOÇÃO DE ENCERRAMENTO)(3° PESSOA SINGULAR)
+    --- chega de conversa
+  -- SER (HORA, DATA, DISTÂNCIA)(VERBO CONCORDA COM NUMERAL)
+    --- são duas horas
+
+
+//======================================================================================
+
+SUJEITO EXISTENTE DETERMINADO SIMPLES:
+  - [as {policias}(núcleo) civil e militar] trabalham juntas
+  - [os {poderes}(núcleo) legislativo, executivo e judiciário] são independentes e harmónicos entre se
+
+SUJEITO EXISTENTE DETERMINADO SIMPLES EXPRESSIVO:
+  - conhecia [o filho] a realidade dos pais
+
+SUJEITO EXISTENTE DETERMINADO SIMPLES DESINENCIAL OU OCULTO:
+  - [somos] responsáveis pelo país
+
+SUJEITO EXISTENTE DETERMINADO COMPOSTO:
+  - [a policias civil e a militar] trabalham juntas
+  - [{o poder legislativo}, {o executivo} e o {judiciário}] são independentes e harmónicos entre se
+  - [a situação {da moça} e {do rapaz}] serão resolvidas
+
+SUJEITO EXISTENTE DETERMINADO ORACIONAL OU ORAÇÃO SUBJETIVA:
+  - Não se sabe [se ela participará do evento]
+  - Não se(PA) espera(VTD) [que isso seja resolvido]
+
+SUJEITO EXISTENTE INDETERMINADO 3° PESSOA DO PLURAL SEM REFERENTE:
+  - roubaram o relógio da moça da boate
+
+SUJEITO EXISTENTE INDETERMINADO INFINITIVO IMPESSOAL:
+  - amar(sujeito no infinitivo impessoal) é bom
+
+
+//======================================================================================

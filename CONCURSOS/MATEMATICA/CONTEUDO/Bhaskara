@@ -1,0 +1,23 @@
+//=====================================================
+ax**2 + bx + c = 0
+a, b e c são números reais e a ≠ 0
+
+
+2x**2 + 3x + 5 = 0
+Onde; a = 2, b = 3, c = 5
+
+x: é uma variável chamada de incógnita
+a: coeficiente quadrático
+b: coeficiente linear
+c: coeficiente constante
+
+//=====================================================
+
+Δ = b**2 - 4.a.c
+X = (-b +- sqrt(Δ)) / 2.a
+
+Se o valor de Δ for maior que zero (Δ > 0), a equação terá duas raízes reais e distintas.
+Se o valor de Δ for igual a zero (Δ = 0), a equação apresentará somente uma raiz.
+Se o valor de Δ for menor que zero (Δ < 0), a equação não apresentará raiz.
+
+//=====================================================

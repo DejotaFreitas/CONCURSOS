@@ -1,0 +1,21 @@
+VIEW ou visão: e uma tabela virtual que pode ser definida com uma conjunto comando que abrage varias tabelas
+
+  - Simplificação do código: as views nos permitem criar um código de programação mais limpo
+  - Reuso: as views são objetos de caráter permanente
+  - Segurança: as views permitem que ocultemos determinadas colunas de uma tabela ou alterar o nome das colunas para que não tenha acesso a informações da estrutura do banco de dados.
+
+
+=================================================================================
+//criando view
+REATE VIEW vwProdutos AS
+SELECT IdProduto AS Código,
+       Nome AS Produto,
+       Fabricante,
+       Quantidade,
+       VlUnitario AS [ValorUnitario],
+       Tipo
+FROM Produtos
+
+
+//excluindo views
+DROP VIEW vwProdutos

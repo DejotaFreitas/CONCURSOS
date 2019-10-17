@@ -1,0 +1,28 @@
+O modelo relacional: O modelo relacional modela os dados num conjunto de relações (tabelas ou ficheiros) que são constituídas por um conjunto de atributos (colunas ou campos) que definem as propriedades ou características relevantes da entidade (conceito, objectivo) que representam. Cada tuplo (linha ou registo) da relação caracteriza um elemento único.
+
+A base de dados relacionais possui inúmeras vantagens sobre as não relacionais:
+    Eliminação de duplicados de informação;
+    Economia de espaço de armazenamento;
+    Maior rapidez de actualização;
+    Acesso mais rápido às informações.
+
+Histórico Modelo Relacional
+  - Foi introduzido por Codd (1970)
+  - Tornou-se um padrão de fato para aplicações comerciais, devido a sua simplicidade e performance.
+  - É um modelo formal, baseado na teoria matemática das relações
+  -  Um dos SGBD's precursores que implementaram este modelo foi o System R (IBM). Baseado em seus conceitos surgiram: DB2 (IBM), SQL-DS (IBM), Oracle, Informix, Ingres, Sybase entre outros.
+
+
+Conceitos do Modelo Relacional
+  • O modelo relacional representa os dados num BD como uma coleção de tabelas (relações).
+  • Cada tabela terá um nome, que será único, e um conjunto de atributos com seus respectivos nomes e domínios.
+  • Todos os valores de uma coluna são do mesmo tipo de dados
+
+Terminologia:
+  – Na terminologia de BD Relacional uma linha é chamada tupla, um nome de coluna é chamado de atributo e cada tabela é chamada de relação.
+
+Características de Relações:
+  – A ordem das tuplas e dos atributos não tem importância
+  – Todo atributo possui valor atômico
+  – Cada atributo numa relação tem um nome que é único dentro da relação.
+  – Todas as tuplas devem ser únicas (conjunto).

@@ -1,0 +1,36 @@
+Banco de dados é uma coleção de dados organizados que representa de forma abstrata informações de modelos de coisas do mundo real, de forma que é possível gerir todas essas informações.
+
+===============================================================================
+Visão dos dados (abstração dos dados)
+  Nível físico – Nível de abstração mais baixo, descreve como os dados são armazenados.
+  Nível lógico – O próximo nível de abstração, descreve quais dados estão armazenados no banco de dados e quais relações existem entre eles.
+  Nível de visão – A abstração mais alta, descreve apenas parte do banco de dados.
+
+
+===============================================================================
+Esquemas
+  Esquema físico – descreve o projeto de banco de dados no nível físico.
+  Esquema lógico – descreve o projeto de banco de dados no nível lógico.
+
+===============================================================================
+Modelo de dados
+  Modelo relacional
+  Modelo entidade-relacionamento
+  Modelo de dados baseado em objetos.
+  Modelo de dados semiestruturado.
+
+===============================================================================
+Arquitetura
+  Duas camadas: Cliente (usuário e aplicação) + Servidor (sistema de banco de dados)
+  Três camadas: Cliente (usuário e cliente de aplicação) + Servidor (servidor de aplicação + sistema de banco de dados)
+
+===============================================================================
+
+
+===============================================================================
+
+
+===============================================================================
+
+
+===============================================================================

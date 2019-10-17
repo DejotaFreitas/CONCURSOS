@@ -1,0 +1,170 @@
+A segurança do banco de dados herda as mesmas dificuldades que a segurança da informação enfrenta, que é garantir a integridade, a disponibilidade e a confidencialidade.
+
+A integridade do banco de dados se refere ao requisito de que a informação seja protegida contra modificação imprópria.
+
+A disponibilidade do banco de dados refere-se a tornar os objetos disponíveis a um usuário ou a um programa ao qual eles têm um direito legitimo.
+
+A confidencialidade do banco de dados se refere à proteção dos dados contra a exposição não autorizada.
+
+Os bancos de dados SQL implementam mecanismos que restringem ou permitem acessos aos dados de acordo com papeis ou roles fornecidos pelo administrador.
+
+O comando GRANT concede privilégios específicos para um objeto (tabela, visão, sequência, banco de dados, função, linguagem procedural, esquema ou espaço de tabelas) para um ou mais usuários ou grupos de usuários.
+
+A preocupação com a criação e manutenção de ambientes seguros se tornou a ocupação principal de administradores de redes, de sistemas operacionais e de bancos de dados. Pesquisas mostram que a maioria dos ataques, roubos de informações e acessos não- autorizados são feitos por pessoas que pertencentes à organização alvo.
+
+==================================================================================
+Controle de Acesso:
+
+É todo controle feito quanto ao acesso ao BD, impondo regras de restrição, através das contas dos usuários.
+
+O Administrador do BD (DBA) é o responsável superior por declarar as regras dentro do SGBD.
+
+Ele é o responsável por conceder ou remover privilégios, criar ou excluir usuários, e atribuição de um nível de segurança aos usuários do sistema, de acordo com a política da empresa.
+
+==================================================================================
+Controle de Inferência
+
+É um mecanismo de segurança para banco de dados estatísticos que atua protegendo informações estatísticas de um individuo ou de um grupo. Bancos de dados estatísticos são usados principalmente para produzir estatísticas sobre várias populações.
+
+O banco de dados pode conter informações confidenciais sobre indivíduos. Os usuários têm permissão apenas para recuperar informações estatísticas sobre populações e não para recuperar dados individuais, como, por exemplo, a renda de uma pessoa específica.
+
+==================================================================================
+Controle de Fluxo
+
+É um mecanismo que previne que as informações fluam por canais secretos e violem a política de segurança ao alcançarem usuários não autorizados. Ele regula a distribuição ou fluxo de informação entre objetos acessíveis.
+
+Um fluxo entre o objeto A e o objeto B ocorre quando um programa lê valores de A e escreve valores em B.
+
+Os controles de fluxo têm a finalidade de verificar se informações contidas em alguns objetos não fluem explicita ou implicitamente para objetos de menor proteção.
+
+Dessa maneira, um usuário não pode obter indiretamente em B aquilo que ele ou ela não puder obter diretamente de A.
+
+==================================================================================
+Criptografia de Dados
+
+É uma medida de controle final, utilizada para proteger dados sigilosos que são transmitidos por meio de algum tipo de rede de comunicação.
+
+Ela também pode ser usada para oferecer proteção adicional para que partes confidenciais de um banco de dados não sejam acessadas por usuários não autorizados.
+
+Para isso, os dados são codificados através da utilização de algum algoritmo de codificação.
+
+Assim, um usuário não autorizado terá dificuldade para decifrá-los, mas os usuários autorizados receberão chaves para decifrar esses dados.
+
+A criptografia permite o disfarce da mensagem para que, mesmo com o desvio da transmissão, a mensagem não seja revelada.
+
+==================================================================================
+Usuários
+
+Abrange usuários e esquema do banco de dados onde cada banco de dados Oracle tem uma lista de nomes de usuários.
+
+Para acessar um banco de dados, um usuário deve usar um aplicativo desse tipo e tentar uma conexão com um nome de usuário valido.
+
+Cada nome tem uma senha associada para evitar o uso sem autorização.
+
+Devem ser implementados ainda diferentes perfis de usuário para diferentes tarefas no Oracle, tendo em vista que cada aplicação/usuário tem a sua necessidade de acesso.
+
+Existe ainda a possibilidade de proteger os perfis com senha, o que é uma excelente medida.
+
+Além dessas medidas, o uso de cotas aumenta a restrição de espaço em disco a ser utilizado por usuários/aplicativos.
+
+==================================================================================
+Domínio de Segurança
+
+Onde cada usuário tem um domínio de segurança, um conjunto de propriedades que determinam coisas como ações (privilégios e papeis) disponíveis para o usuário; cota de tablespaces (espaço disponível em disco) do usuário; limites de recursos de sistema do usuário.
+
+As tabelas (tablespaces) do sistema, como a system, devem ser protegidas de acessos de usuários diferentes dos usuários de sistema.
+
+A liberação de escrita e alteração de dados em tais tabelas é muito comum em ambientes de teste, onde os programadores e DBAs tomam tal atitude para evitar erros de aplicação por falta de privilégios.
+
+Porém, em ambientes de produção, tal medida é totalmente desaconselhável.
+
+==================================================================================
+Autoridade
+
+As autoridades fornecem um método de agrupar privilégios e controlar o nível de acesso dos administradores e operadores da base de dados com relação à manutenção e operações permitidas.
+
+As especificações da base de dados estão armazenadas em catálogos da própria base de dados.
+
+As autoridades do sistema estão associadas a membros de grupos e armazenados no arquivo de configuração administrativa do banco de dados.
+
+Este arquivo define as concessões de acesso e o que poderá ser executado de acordo com cada grupo.
+
+==================================================================================
+Privilégios
+
+Os privilégios são permissões únicas dadas a cada usuário ou grupo.
+
+Eles definem permissões para tipos de autorização.
+
+Pelos privilégios é possível autorizar o usuário a modificar ou alcançar determinado recurso do Banco de Dados.
+
+Os privilégios também são armazenados em catálogos do próprio Banco de Dados, visto que os grupos de autoridade por já possuírem grupos predefinidos de privilégio concedem implicitamente privilégios a seus membros.
+
+==================================================================================
+Tipos de privilégios discricionários
+
+O SGBD deve oferecer acesso seletivo a cada relação do banco de dados baseando-se em contas específicas.
+
+As operações também podem ser controladas; assim, possuir uma conta não necessariamente habilita o possuidor a todas as funcionalidades oferecidas pelo SGBD.
+
+Informalmente existem dois níveis para a atribuição de privilégios para o uso do sistema de banco de dados:
+
+O nível de conta: Nesse nível, o DBA estabelece os privilégios específicos que cada conta tem, independente das relações no banco de dados.
+
+O nível de relação (ou tabela): Nesse nível, o DBA pode controlar o privilégio para acessar cada relação ou visão individual no banco de dados.
+
+==================================================================================
+Revogação de privilégios
+
+Em alguns casos, interessa conceder um privilégio temporário a um usuário.
+
+Por exemplo, o proprietário de uma relação pode querer conceder o privilégio SELECT a um usuário para uma tarefa específica e depois revogar aquele privilégio quando a tarefa estiver completada.
+
+Por isso, é necessário um mecanismo para a revogação de privilégios. Em SQL, um comando REVOKE é introduzido com o intento de cancelar privilégios.
+
+==================================================================================
+Controle de acesso obrigatório e para segurança multi-nível
+
+Neste método, o usuário não tem um meio termo, ou ele tem ou não tem privilégios, sendo utilizado normalmente em BD que classificam dados de usuários, onde é necessário um nível a mais de segurança. A maioria dos SGBDs não oferecem esse tipo de controle de acesso obrigatório, ficando com os controles discricionários ditos anteriormente. Normalmente são utilizados em sistemas governamentais, militares ou de inteligência, assim como industriais e corporativas.
+
+As classes de segurança típicas são altamente sigilosas (top secret, TS), secreta (secret, S), confidenciais (confidential) (C) e não Classificada (unclassified, U), em que TS é o nível mais alto e U é o mais baixo.
+
+De uma forma geral, os mecanismos de controle de acesso obrigatório impõem segurança multinível, pois exigem a classificação de usuários e de valores de dados em classes de segurança e impõem as regras que proíbem o fluxo de informação a partir dos níveis de segurança mais altos para os mais baixos.
+
+==================================================================================
+Controle de acesso baseado em papéis
+
+É uma abordagem para restringir o acesso a usuários autorizados e uma alternativa aos sistemas de controles de acesso do tipo MAC e DAC. O conceito de controle de acesso baseado em papéis surgiu com os primeiros sistemas computacionais multiusuários interativos. A idéia central do RBAC é que permissões de acesso são associadas a papéis, e estes papéis são associados a usuários. Papéis são criados de acordo com os diferentes cargos em uma organização, e os usuários são associados a papeis de acordo com as suas responsabilidades e qualificações. Vários indivíduos podem ser designados para cada papel. Os privilégios de segurança comuns a um papel são concedidos ao nome dele, e qualquer indivíduo designado para esse papel automaticamente teria esses privilégios concedidos.
+
+Os usuários podem ser facilmente remanejados de um papel para outro. Mudanças no ambiente computacional, como instalação de novos sistemas e remoção de aplicações antigas, modificam apenas o conjunto de permissões atribuídas aos diferentes papeis, sem envolver diretamente o conjunto de usuários.
+
+A separação de tarefas é um requisito importante em diversos SGDBs. É necessária para impedir que um usuário realize sozinho o trabalho que requer o envolvimento de outras pessoas. A exclusão mútua de papéis é um método que pode ser implementado com sucesso.
+
+Outro aspecto relevante nos sistemas RBAC são as restrições temporais possíveis que podem existir nos papéis, como o tempo e a duração das ativações de papéis e o disparo temporizado de um papel por uma ativação de outro papel. O uso se um modelo RBAC é um objetivo altamente desejado pela para solucionar os principais requisitos de segurança das aplicações baseadas na web.
+
+==================================================================================
+Controle de acesso utilizando Triggers
+
+Com a utilização das Triggers é possível criar mecanismos de segurança mais complexos que podem ser disparados cada vez que um evento é chamado. O comando Insert na tabela é exemplo de um evento que pode ser usado para disparar uma Triggers, além disso, as mesmas podem ser disparadas antes ou depois de comando especificado com o objetivo de prover maior rigor no controle de segurança.
+
+Se o comando executado pelo usuário não for validado pela Triggers, um erro é sinalizado do corpo da própria Triggers para impedir que a tabela seja modificada indevidamente.
+
+==================================================================================
+Views
+
+As views constituem um outro método de controle de acesso, normalmente utilizadas para restringir o acesso direto aos dados. Com a view é possível permitir acesso de usuário concedendo privilégios, ocultar linhas e colunas de informações confidenciais ou restritas residentes na tabela original das indicações do SQL.
+
+Os privilégios e concessões são definidos somente na view e não afetam a tabela base sendo o acesso dos usuários delimitado pela view, a qual é gerada criando um subconjunto de dados na tabela referenciada.
+
+A opção With Verification provê maior segurança porque não permite ao usuário modificar as linhas de tabela sem ter privilégios de leitura dentro da view.
+
+==================================================================================
+
+
+==================================================================================
+
+
+==================================================================================
+
+
+==================================================================================

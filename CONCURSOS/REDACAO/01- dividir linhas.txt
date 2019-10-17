@@ -1,0 +1,39 @@
+//==================================================================================
+INTRODUÇÃO -> 1 PARAGRAFO -> 20% da redação
+DESENVOLVIMENTO -> 2 a 3 PARAGRAFO -> 60% da redação
+CONCLUSÂO -> 1 PARAGRAFO -> 20% da redação
+
+//===================================
+REDAÇÂO 30 LINAS:
+    INTRODUÇÃO -> 6 linhas
+    DESENVOLVIMENTO -> 8~9 linhas (não ultrapasse 8 linhas no paragrafo desenvolvimento)
+    DESENVOLVIMENTO -> 8~9 linhas (não ultrapasse 8 linhas no paragrafo desenvolvimento)
+    CONCLUSÂO -> 6 linhas
+OU
+    INTRODUÇÃO -> 6 linhas
+    DESENVOLVIMENTO -> 6 linhas
+    DESENVOLVIMENTO -> 6 linhas
+    DESENVOLVIMENTO -> 6 linhas
+    CONCLUSÂO -> 6 linhas
+
+//===================================
+TEMA: PROBLEMA SOCIAL (duas palavras-chaves)
+    INTRODUÇÃO -> apresentar texto
+    DESENVOLVIMENTO -> Causas
+    DESENVOLVIMENTO -> Consequências
+    CONCLUSÂO -> Sugestão de solução
+
+TEMA: RELAÇÂO DO HOMEM E A MÁQUINA (duas palavras-chaves)
+    INTRODUÇÃO -> apresentar texto
+    DESENVOLVIMENTO -> Aspectos positivos
+    DESENVOLVIMENTO -> Aspectos negativos
+    CONCLUSÂO -> Sugestão de solução
+
+TEMA: PLANEJAMENTO TÁTICO ESTRATÉGICO E OPERACIONAL (três palavras-chaves)
+    INTRODUÇÃO -> apresentar texto
+    DESENVOLVIMENTO -> Aspectos tático
+    DESENVOLVIMENTO -> Aspectos estratégico
+    DESENVOLVIMENTO -> Aspectos operacional
+    CONCLUSÂO -> Sugestão de solução
+
+//===================================

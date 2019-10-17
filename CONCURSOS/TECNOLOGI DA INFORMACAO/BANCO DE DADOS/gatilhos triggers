@@ -1,0 +1,119 @@
+Gatilhos ou triggers:
+
+ - está relacionada a uma tabela
+ - dispara na invocação de um comando DML
+ - os comandos LOAD DATA e REPLACE também disparam os eventos de inserção e exclusão
+ - não podem ser chamados diretamente, respondem a um evento
+ - armazenado no DB como arquivo separado
+ - NEW referencia o valor de algo que ainda nao foi inserido no banco
+ - OLD referencia valor que existe no banco
+
+ USADO:
+    - validar dados
+    - verificar integridade dos dados
+    - registrar e rastrear dados de log
+    -
+
+===================================================================================
+// automaticamente salva o preço com desconto no banco
+
+CREATE TRIGGER tr_desconto BEFORE INSERT ON produto
+FOR EACH ROW
+SET NEW.preco_deconto = (NEW.preco_normal * 0.90);
+
+
+
+===================================================================================
+
+CREATE TRIGGER nome_momento_evento ON tabela
+FOR EACH ROW
+BEGIN
+  /*corpo do código*/
+END
+
+===================================================================================
+
+CREATE TRIGGER [NOME DO TRIGGER]
+ON [NOME DA TABELA]
+[FOR/AFTER/INSTEAD OF] [INSERT/UPDATE/DELETE]
+AS
+
+===================================================================================
+
+DELIMITER $
+
+CREATE TRIGGER Tgr_ItensVenda_Insert AFTER INSERT
+ON ItensVenda
+FOR EACH ROW
+BEGIN
+    UPDATE Produtos SET Estoque = Estoque - NEW.Quantidade
+WHERE Referencia = NEW.Produto;
+END$
+
+CREATE TRIGGER Tgr_ItensVenda_Delete AFTER DELETE
+ON ItensVenda
+FOR EACH ROW
+BEGIN
+    UPDATE Produtos SET Estoque = Estoque + OLD.Quantidade
+WHERE Referencia = OLD.Produto;
+END$
+
+DELIMITER ;
+
+=========================================Oracle=====================================
+
+CREATE [OR REPLACE ] TRIGGER trigger_name
+  {BEFORE | AFTER | INSTEAD OF }
+  {INSERT [OR] | UPDATE [OR] | DELETE}
+  [OF col_name]
+  ON table_name
+  [REFERENCING OLD AS o NEW AS n]
+  [FOR EACH ROW]
+  WHEN (condition)
+  DECLARE
+     Declaration-statements
+  BEGIN
+     Executable-statements
+  EXCEPTION
+     Exception-handling-statements
+  END;
+
+===================================SQL Server=============================================
+-- Sintaxe do SQL Server
+  Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)
+  CREATE TRIGGER [ schema_name . ]trigger_name
+  ON { table | view }
+  [ WITH <dml_trigger_option> [ ,...n ] ]
+  { FOR | AFTER | INSTEAD OF }
+  { [ INSERT ] [ , ] [ UPDATE ] [ , ] [ DELETE ] }
+  [ WITH APPEND ]
+  [ NOT FOR REPLICATION ]
+  AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
+
+  <dml_trigger_option> ::=
+      [ ENCRYPTION ]
+      [ EXECUTE AS Clause ]
+  <method_specifier> ::=
+      assembly_name.class_name.method_name
+
+
+================================================================================
+
+===================================Postgres=============================================
+CREATE [ CONSTRAINT ] TRIGGER name { BEFORE | AFTER | INSTEAD OF } { event [ OR ... ] }
+    ON table_name
+    [ FROM referenced_table_name ]
+    [ NOT DEFERRABLE | [ DEFERRABLE ] { INITIALLY IMMEDIATE | INITIALLY DEFERRED } ]
+    [ FOR [ EACH ] { ROW | STATEMENT } ]
+    [ WHEN ( condition ) ]
+    EXECUTE PROCEDURE function_name ( arguments )
+
+==================================Firebird==============================================
+{CREATE | RECREATE | CREATE OR ALTER} TRIGGER name FOR {TABLE name | VIEW name}
+   [ACTIVE | INACTIVE]
+   {BEFORE | AFTER}
+   {INSERT [OR UPDATE] [OR DELETE] | UPDATE [OR INSERT] [OR DELETE] | DELETE [OR UPDATE] [OR INSERT] }
+   [POSITION n] AS
+  BEGIN
+   .....
+  END

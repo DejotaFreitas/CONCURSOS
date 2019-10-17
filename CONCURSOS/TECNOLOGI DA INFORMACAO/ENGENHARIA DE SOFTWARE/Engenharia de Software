@@ -1,0 +1,34 @@
+A Engenharia de Software é composta de diversos conceitos de fundamental importância na área e abrange um processo: um conjunto de métodos ou práticas e diversas ferramentas que possibilitam aos profissionais desenvolverem software de alta qualidade.
+
+Engenharia de Software é o estabelecimento e o emprego de sólidos princípios de engenharia de modo a obter software de maneira econômica, que seja confiável e funcione de forma eficiente em máquinas reais
+
+Um artefacto ou artefato é um dos vários tipos de subprodutos concretos produzido durante o desenvolvimento de software. Alguns artefatos (por exemplo, casos de uso, diagramas de classes, requisitos e documentos de projeto) ajudam a descrever a função, arquitetura e o design do software.
+
+Um conceito bastante importante dentro de processo é o de metodologia ou framework que é o responsável por estabelecer uma base para um processo de engenharia de software completo através de um pequeno número atividades estruturais aplicáveis a todos projetos de software, independente de tamanho ou complexidade. Uma metodologia de processo genérica possui cinco atividades:
+
+Comunicação: Antes do inicio do projeto comunicamos e colaboramos com os clientes e todos os interessados para compreender os seus objetivos e fazermos o levantamento das necessidades que ajudarão a definirmos as funções e características do software a ser construído.
+
+Planejamento: O planejamento é como um mapa que ajuda a guiar a equipe na jornada de construção do produto. No planejamento define-se o trabalho de engenharia descrevendo suas tarefas técnicas, riscos, recursos necessários, produtos a serem construídos e um cronograma de trabalho.
+
+Modelagem: Modelos são esboços de modo que possamos ter uma ideia melhor do todo. Caso necessários os modelos são mais detalhados a fim de compreender melhor o problema e como resolvê-lo.
+
+Construção: Essa atividade é onde o software é construído. No entanto, atividades de testes também são realizadas nessa atividade com o intuito de revelar erros na codificação.
+
+Emprego: O incremento do software ou o software completo é entregue ao cliente que avalia o produto e retorna feedbacks baseando-se na avaliação do produto.
+
+As atividades acima também são complementadas por uma série de atividades de apoio que são aplicadas ao longo de um projeto e ajuda a equipe no gerenciamento, controle de progresso, qualidade, mudanças e risco. As atividades de apoio são:
+
+Controle e acompanhamento: Permite uma avaliação do progresso em relação ao plano do projeto e que sejam tomadas medidas necessárias para o cumprimento do cronograma proposto.
+
+Administração de Riscos: Avalia os riscos que podem afetar o resultado ou a qualidade do produto ou do projeto.
+
+Garantia da Qualidade: Define e conduz as atividades que garantem a qualidade do software.
+Revisões técnicas: Avaliam-se artefatos para identificar e eliminar erros antes que sejam propagadas para a atividade seguinte.
+
+Medição: Define e coleta medidas do processo, projeto e do produto que auxiliarão na entrega do software de acordo com os requisitos.
+
+Gerenciamento da configuração de software: gerenciar os efeitos das mudanças.
+
+Gerenciamento da reusabilidade: Define quais serão os critérios para reuso e estabelece mecanismos para obtenção de componentes reutilizáveis.
+
+Preparo e produção de artefatos de software: Engloba atividades para criar artefatos como modelos, documentos, logs, formulários, etc.
